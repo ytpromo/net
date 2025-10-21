@@ -1,12 +1,15 @@
 import { NavLink, Route, Routes, BrowserRouter, useLocation } from 'react-router-dom'
 import HomePage from './pages/Home'
 import ServicesPage from './pages/Services'
+import PostgreSQLServicePage from './pages/PostgreSQLService'
 import LoginPage from './pages/Login'
+import DashboardPage from './pages/Dashboard'
 import './App.css'
 
 const Navigation = () => {
   const location = useLocation()
   const isServices = location.pathname.startsWith('/services')
+  const isDashboard = location.pathname.startsWith('/dashboard')
 
   return (
     <nav className="hero__nav">
@@ -25,6 +28,14 @@ const Navigation = () => {
       <ul className="nav__links">
         <li className="nav__item">
           <a href="#">مستندات</a>
+        </li>
+        <li className={`nav__item${isDashboard ? ' nav__item--active' : ''}`}>
+          <NavLink
+            to="/dashboard"
+            className={({ isActive }) => `nav__link${isActive ? ' nav__link--active' : ''}`}
+          >
+            کنسول
+          </NavLink>
         </li>
         <li className={`nav__item${isServices ? ' nav__item--active' : ''}`}>
           <NavLink
@@ -65,7 +76,9 @@ const AppShell = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/services/postgresql" element={<PostgreSQLServicePage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
         </Routes>
       </main>
     </div>

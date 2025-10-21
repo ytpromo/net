@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import type { IconType } from 'react-icons'
 import { FiActivity, FiDatabase, FiGlobe, FiServer } from 'react-icons/fi'
 import { SiGitlab, SiJenkins } from 'react-icons/si'
@@ -11,6 +12,8 @@ type Service = {
   highlights: string[]
   badge?: string
   accent: string
+  ctaLink?: string
+  ctaLabel?: string
 }
 
 type CategoryKey = 'enterprise' | 'free'
@@ -37,14 +40,16 @@ const categories: ServiceCategory[] = [
         accent: 'linear-gradient(135deg, #ff9c6b 0%, #ff4d4d 100%)',
       },
       {
-        id: 'database',
-        title: 'Database as a Service',
+        id: 'postgresql',
+        title: 'PostgreSQL مدیریت‌شده',
         description:
-          'PostgreSQL و MySQL مدیریت‌شده با بک‌آپ خودکار، مقیاس‌پذیری آنی و رمزنگاری سراسری.',
+          'راهکار دیتابیس سازمانی با استقرار خودکار، بک‌آپ‌گیری مستمر و مانیتورینگ بلادرنگ روی زیرساخت مگان یا سرور شما.',
         icon: FiDatabase,
-        highlights: ['پشتیبان‌گیری روزانه', 'HA Cluster', 'رمزنگاری داده'],
+        highlights: ['استقرار چندمحیطی', 'پایش ۲۴/۷', 'رمزنگاری در حالت سکون'],
         badge: 'Data',
         accent: 'linear-gradient(135deg, #7d82ff 0%, #b597ff 100%)',
+        ctaLink: '/services/postgresql',
+        ctaLabel: 'مشاهده جزئیات',
       },
       {
         id: 'jenkins',
@@ -126,26 +131,34 @@ const ServicesPage = () => {
       </header>
 
       <div className="services__grid">
-        {activeCategory.services.map(({ id, title, description, icon: Icon, highlights, badge, accent }) => (
-          <article key={id} className="service-card">
-            <div className="service-card__header">
-              <div className="service-card__icon" aria-hidden="true" style={{ background: accent }}>
-                <Icon />
+        {activeCategory.services.map(
+          ({ id, title, description, icon: Icon, highlights, badge, accent, ctaLink, ctaLabel }) => (
+            <article key={id} className="service-card">
+              <div className="service-card__header">
+                <div className="service-card__icon" aria-hidden="true" style={{ background: accent }}>
+                  <Icon />
+                </div>
+                {badge ? <span className="service-card__badge">{badge}</span> : null}
               </div>
-              {badge ? <span className="service-card__badge">{badge}</span> : null}
-            </div>
-            <h3 className="service-card__title">{title}</h3>
-            <p className="service-card__description">{description}</p>
-            <ul className="service-card__highlights">
-              {highlights.map((highlight) => (
-                <li key={highlight}>{highlight}</li>
-              ))}
-            </ul>
-            <button type="button" className="service-card__cta">
-              شروع کنید
-            </button>
-          </article>
-        ))}
+              <h3 className="service-card__title">{title}</h3>
+              <p className="service-card__description">{description}</p>
+              <ul className="service-card__highlights">
+                {highlights.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
+                ))}
+              </ul>
+              {ctaLink ? (
+                <Link to={ctaLink} className="service-card__cta">
+                  {ctaLabel ?? 'شروع کنید'}
+                </Link>
+              ) : (
+                <button type="button" className="service-card__cta">
+                  {ctaLabel ?? 'شروع کنید'}
+                </button>
+              )}
+            </article>
+          ),
+        )}
       </div>
     </section>
   )
