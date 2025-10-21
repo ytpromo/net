@@ -9,7 +9,6 @@ import './App.css'
 const Navigation = () => {
   const location = useLocation()
   const isServices = location.pathname.startsWith('/services')
-  const isDashboard = location.pathname.startsWith('/dashboard')
 
   return (
     <nav className="hero__nav">
@@ -28,14 +27,6 @@ const Navigation = () => {
       <ul className="nav__links">
         <li className="nav__item">
           <a href="#">مستندات</a>
-        </li>
-        <li className={`nav__item${isDashboard ? ' nav__item--active' : ''}`}>
-          <NavLink
-            to="/dashboard"
-            className={({ isActive }) => `nav__link${isActive ? ' nav__link--active' : ''}`}
-          >
-            کنسول
-          </NavLink>
         </li>
         <li className={`nav__item${isServices ? ' nav__item--active' : ''}`}>
           <NavLink

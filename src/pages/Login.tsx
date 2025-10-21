@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react'
+import { useNavigate } from 'react-router-dom'
 import '../App.css'
 
 type LoginMode = 'otp' | 'password'
@@ -6,6 +7,7 @@ type LoginMode = 'otp' | 'password'
 const phoneInputMode = 'tel'
 
 const LoginPage = () => {
+  const navigate = useNavigate()
   const [mode, setMode] = useState<LoginMode>('otp')
   const [phone, setPhone] = useState('')
   const [password, setPassword] = useState('')
@@ -14,6 +16,7 @@ const LoginPage = () => {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
+    navigate('/dashboard')
   }
 
   const toggleMode = () => {
