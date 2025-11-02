@@ -36,33 +36,223 @@ const features = [
   },
 ]
 
-const pricingPlans = [
+const pricingThemes = [
   {
-    id: 'kings-landing',
-    title: "King's Landing",
-    tier: 'پلن پایه',
-    price: '۱,۰۰۰,۰۰۰ تومان در ماه',
-    description: 'راه‌اندازی روی سرور ابری لینوکسی مگان با کمترین هزینه پیاده‌سازی.',
-    infra: 'زیرساخت مگان / Self-Hosted',
-    ctaLabel: 'سفارش با زیرساخت مگان',
+    id: 'standard',
+    label: 'حالت استاندارد',
+    icon: '✨',
+    plans: [
+      {
+        id: 'standard-megan',
+        title: 'نسخه ابری مگان',
+        tier: 'پلن پایه',
+        price: '۱٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'راه‌اندازی روی سرور ابری لینوکسی مگان با کمترین هزینه پیاده‌سازی و نگهداری.',
+        infra: 'زیرساخت مگان / Self-Hosted',
+      },
+      {
+        id: 'standard-owned',
+        title: 'نصب روی سرور شما',
+        tier: 'پلن حرفه‌ای',
+        price: '۳٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'استقرار بر روی سرور لینوکسی خریداری‌شده توسط شما با پیکربندی سفارشی.',
+        infra: 'سرور متعلق به مشتری',
+      },
+      {
+        id: 'standard-dedicated',
+        title: 'میزبانی اختصاصی سازمانی',
+        tier: 'پلن اینترپرایز',
+        price: '۵٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'سلف‌هاستد اختصاصی روی زیرساخت مگان بدون نیاز به سرور شخصی با SLA سازمانی.',
+        infra: 'میزبانی اختصاصی مگان',
+      },
+    ],
   },
   {
-    id: 'winterfell',
-    title: 'Winterfell',
-    tier: 'پلن حرفه‌ای',
-    price: '۳,۰۰۰,۰۰۰ تومان در ماه',
-    description: 'استقرار روی سرور لینوکسی شما با پیکربندی سفارشی و مانیتورینگ ۲۴/۷.',
-    infra: 'سرور متعلق به مشتری',
-    ctaLabel: 'سفارش برای سرور خودم',
+    id: 'game-of-thrones',
+    label: 'Game of Thrones',
+    icon: '🐉',
+    plans: [
+      {
+        id: 'got-kings-landing',
+        title: "King's Landing (کینگز لندینگ)",
+        tier: 'گارانتی',
+        price: '۱٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'راه‌اندازی روی سرور ابری لینوکسی مگان با کمترین هزینه پیاده‌سازی.',
+        infra: 'زیرساخت کامل مگان',
+      },
+      {
+        id: 'got-winterfell',
+        title: 'Winterfell (وینترفل)',
+        tier: 'متوسط',
+        price: '۳٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'استقرار روی سرور لینوکسی شما با پشتیبانی و مانیتورینگ ۲۴/۷.',
+        infra: 'سرور شخصی مشتری',
+      },
+      {
+        id: 'got-the-wall',
+        title: 'The Wall (دیوار)',
+        tier: 'اورژانسی',
+        price: '۵٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'میزبانی اختصاصی، سلف‌هاستد کامل روی زیرساخت مگان بدون نیاز به سرور شخصی.',
+        infra: 'میزبانی اختصاصی مگان',
+      },
+    ],
   },
   {
-    id: 'the-wall',
-    title: 'The Wall',
-    tier: 'پلن اینترپرایز',
-    price: '۵,۰۰۰,۰۰۰ تومان در ماه',
-    description: 'میزبانی اختصاصی، سلف‌هاستد کامل روی زیرساخت مگان بدون نیاز به سرور شخصی.',
-    infra: 'میزبانی اختصاصی مگان',
-    ctaLabel: 'درخواست مشاوره فروش',
+    id: 'lotr',
+    label: 'The Lord of the Rings',
+    icon: '💍',
+    plans: [
+      {
+        id: 'lotr-minas-tirith',
+        title: 'Minas Tirith (میناس تیریث)',
+        tier: 'گارانتی',
+        price: '۱٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'راه‌اندازی بر روی سرور ابری مگان با بکاپ‌گیری و امنیت مدیریت‌شده.',
+        infra: 'زیرساخت کامل مگان',
+      },
+      {
+        id: 'lotr-rivendell',
+        title: 'Rivendell (ریوندل)',
+        tier: 'متوسط',
+        price: '۳٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'استقرار روی سرور لینوکسی سازمان شما با تیم DevOps همراه.',
+        infra: 'سرور شخصی مشتری',
+      },
+      {
+        id: 'lotr-shire',
+        title: 'The Shire (شایر)',
+        tier: 'اورژانسی',
+        price: '۵٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'میزبانی اختصاصی و آماده با پشتیبانی ۲۴/۷ برای تیم‌های بزرگ.',
+        infra: 'میزبانی اختصاصی مگان',
+      },
+    ],
+  },
+  {
+    id: 'witcher',
+    label: 'The Witcher',
+    icon: '🗡️',
+    plans: [
+      {
+        id: 'witcher-novigrad',
+        title: 'Novigrad (نوویگراد)',
+        tier: 'گارانتی',
+        price: '۱٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'استقرار سریع روی سرور ابری مگان با پیکربندی کاملاً خودکار.',
+        infra: 'زیرساخت کامل مگان',
+      },
+      {
+        id: 'witcher-oxenfurt',
+        title: 'Oxenfurt (اگزن‌فورت)',
+        tier: 'متوسط',
+        price: '۳٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'نصب روی سرور اختصاصی شما با مانیتورینگ و نگهداری کامل.',
+        infra: 'سرور شخصی مشتری',
+      },
+      {
+        id: 'witcher-kaer-morhen',
+        title: 'Kaer Morhen (کائر مورهن)',
+        tier: 'اورژانسی',
+        price: '۵٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'میزبانی اختصاصی، پایدار و امن روی زیرساخت مگان با SLA پیشرفته.',
+        infra: 'میزبانی اختصاصی مگان',
+      },
+    ],
+  },
+  {
+    id: 'vikings',
+    label: 'Vikings',
+    icon: '⚔️',
+    plans: [
+      {
+        id: 'vikings-kattegat',
+        title: 'Kattegat (کاتگات)',
+        tier: 'گارانتی',
+        price: '۱٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'راه‌اندازی سریع و اقتصادی روی سرورهای ابری مگان.',
+        infra: 'زیرساخت کامل مگان',
+      },
+      {
+        id: 'vikings-uppsala',
+        title: 'Uppsala (اوپسالا)',
+        tier: 'متوسط',
+        price: '۳٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'استقرار روی سرور شخصی شما با آموزش و تحویل مستندات.',
+        infra: 'سرور شخصی مشتری',
+      },
+      {
+        id: 'vikings-paris',
+        title: 'Paris (پاریس)',
+        tier: 'اورژانسی',
+        price: '۵٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'میزبانی اختصاصی روی زیرساخت مگان با دسترسی کاملاً مدیریت‌شده.',
+        infra: 'میزبانی اختصاصی مگان',
+      },
+    ],
+  },
+  {
+    id: 'avatar',
+    label: 'Avatar',
+    icon: '🌊',
+    plans: [
+      {
+        id: 'avatar-fire-nation',
+        title: 'Fire Nation Capital (پایتخت ملت آتش)',
+        tier: 'گارانتی',
+        price: '۱٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'راه‌اندازی کامل روی سرور ابری مگان با نظارت مستمر.',
+        infra: 'زیرساخت کامل مگان',
+      },
+      {
+        id: 'avatar-ba-sing-se',
+        title: 'Ba Sing Se (با سینگ سه)',
+        tier: 'متوسط',
+        price: '۳٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'نصب روی سرور شما با پشتیبانی فنی شبانه‌روزی.',
+        infra: 'سرور شخصی مشتری',
+      },
+      {
+        id: 'avatar-air-temple',
+        title: 'Southern Air Temple (معبد هوا جنوبی)',
+        tier: 'اورژانسی',
+        price: '۵٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'میزبانی اختصاصی با مقیاس‌پذیری بالا برای تیم‌های تحلیلی بزرگ.',
+        infra: 'میزبانی اختصاصی مگان',
+      },
+    ],
+  },
+  {
+    id: 'harry-potter',
+    label: 'Harry Potter',
+    icon: '🪄',
+    plans: [
+      {
+        id: 'hp-ministry',
+        title: 'Ministry of Magic (وزارت جادو)',
+        tier: 'گارانتی',
+        price: '۱٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'استقرار سریع روی سرور ابری مگان با حداقل پیچیدگی.',
+        infra: 'زیرساخت کامل مگان',
+      },
+      {
+        id: 'hp-hogwarts',
+        title: 'Hogwarts (هاگوارتز)',
+        tier: 'متوسط',
+        price: '۳٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'نصب روی سرور شما با تنظیمات امنیتی پیشرفته.',
+        infra: 'سرور شخصی مشتری',
+      },
+      {
+        id: 'hp-hogsmeade',
+        title: 'Hogsmeade (هاگزمید)',
+        tier: 'اورژانسی',
+        price: '۵٬۰۰۰٬۰۰۰ تومان در ماه',
+        description: 'میزبانی اختصاصی روی زیرساخت مگان با SLA طلایی.',
+        infra: 'میزبانی اختصاصی مگان',
+      },
+    ],
   },
 ]
 
@@ -90,7 +280,19 @@ const faqs = [
 ]
 
 const MetabaseServicePage = () => {
-  const [activePlan, setActivePlan] = useState(pricingPlans[0].id)
+  const [activeTheme, setActiveTheme] = useState(pricingThemes[0].id)
+  const [activePlan, setActivePlan] = useState(pricingThemes[0].plans[0].id)
+
+  const handleThemeChange = (themeId: string) => {
+    setActiveTheme(themeId)
+    const theme = pricingThemes.find((item) => item.id === themeId)
+    if (theme) {
+      setActivePlan(theme.plans[0].id)
+    }
+  }
+
+  const currentTheme = pricingThemes.find((theme) => theme.id === activeTheme) ?? pricingThemes[0]
+  const currentPlans = currentTheme.plans
 
   return (
     <section className="metabase-service">
@@ -178,8 +380,27 @@ const MetabaseServicePage = () => {
           بسته مناسب خود را بر اساس زیرساختی که در اختیار دارید انتخاب کنید. همه پلن‌ها شامل پشتیبانی
           ۲۴/۷ و مانیتورینگ سلامت سرویس هستند.
         </p>
-        <div className="metabase-pricing">
-          {pricingPlans.map(({ id, title, tier, price, description, infra, ctaLabel }) => (
+        <div className="metabase-pricing__themes" role="tablist" aria-label="انتخاب تم قیمت‌گذاری">
+          {pricingThemes.map(({ id, label, icon }) => (
+            <button
+              key={id}
+              type="button"
+              role="tab"
+              className={`metabase-pricing__theme ${activeTheme === id ? 'metabase-pricing__theme--active' : ''}`}
+              aria-selected={activeTheme === id}
+              tabIndex={activeTheme === id ? 0 : -1}
+              aria-controls="metabase-pricing-panel"
+              onClick={() => handleThemeChange(id)}
+            >
+              <span className="metabase-pricing__theme-icon" aria-hidden="true">
+                {icon}
+              </span>
+              {label}
+            </button>
+          ))}
+        </div>
+        <div className="metabase-pricing" id="metabase-pricing-panel">
+          {currentPlans.map(({ id, title, tier, price, description, infra }) => (
             <article
               key={id}
               className={`metabase-plan ${activePlan === id ? 'metabase-plan--active' : ''}`}
@@ -202,7 +423,7 @@ const MetabaseServicePage = () => {
               <p className="metabase-plan__description">{description}</p>
               <div className="metabase-plan__meta">{infra}</div>
               <NavLink to="/login" className="metabase-plan__cta">
-                {ctaLabel}
+                سفارش دهید
               </NavLink>
             </article>
           ))}
