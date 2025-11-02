@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { IconType } from 'react-icons'
-import { FiActivity, FiDatabase, FiGlobe, FiServer } from 'react-icons/fi'
+import { FiActivity, FiDatabase, FiGlobe, FiPieChart, FiServer } from 'react-icons/fi'
 import { SiGitlab, SiJenkins } from 'react-icons/si'
 
 type Service = {
@@ -29,6 +29,18 @@ const categories: ServiceCategory[] = [
     key: 'enterprise',
     title: 'سرویس‌های اینترپرایز',
     services: [
+      {
+        id: 'metabase',
+        title: 'Metabase مدیریت‌شده',
+        description:
+          'داشبوردهای تحلیلی آماده روی زیرساخت مگان با پشتیبانی ۲۴/۷ و اتصال به هر دیتابیس سازمانی.',
+        icon: FiPieChart,
+        highlights: ['تحلیل سریع داده', 'امنیت و بکاپ خودکار', 'راه‌اندازی کمتر از ۵ دقیقه'],
+        badge: 'Analytics',
+        accent: 'linear-gradient(135deg, #5f5bff 0%, #8c7dff 100%)',
+        ctaLink: '/services/metabase',
+        ctaLabel: 'مشاهده جزئیات',
+      },
       {
         id: 'gitlab',
         title: 'GitLab as a Service',

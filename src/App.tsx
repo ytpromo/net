@@ -2,6 +2,7 @@ import { NavLink, Route, Routes, BrowserRouter, useLocation } from 'react-router
 import HomePage from './pages/Home'
 import ServicesPage from './pages/Services'
 import PostgreSQLServicePage from './pages/PostgreSQLService'
+import MetabaseServicePage from './pages/MetabaseService'
 import LoginPage from './pages/Login'
 import DashboardPage from './pages/Dashboard'
 import './App.css'
@@ -68,6 +69,7 @@ const AppShell = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/services/postgresql" element={<PostgreSQLServicePage />} />
+          <Route path="/services/metabase" element={<MetabaseServicePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
         </Routes>
