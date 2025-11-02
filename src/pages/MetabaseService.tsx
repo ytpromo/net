@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 const benefits = [
@@ -37,26 +38,60 @@ const features = [
 
 const pricingPlans = [
   {
-    title: 'King\'s Landing',
+    id: 'kings-landing',
+    title: "King's Landing",
     tier: 'پلن پایه',
     price: '۱,۰۰۰,۰۰۰ تومان در ماه',
     description: 'راه‌اندازی روی سرور ابری لینوکسی مگان با کمترین هزینه پیاده‌سازی.',
+    infra: 'زیرساخت مگان / Self-Hosted',
+    ctaLabel: 'سفارش با زیرساخت مگان',
   },
   {
+    id: 'winterfell',
     title: 'Winterfell',
     tier: 'پلن حرفه‌ای',
     price: '۳,۰۰۰,۰۰۰ تومان در ماه',
     description: 'استقرار روی سرور لینوکسی شما با پیکربندی سفارشی و مانیتورینگ ۲۴/۷.',
+    infra: 'سرور متعلق به مشتری',
+    ctaLabel: 'سفارش برای سرور خودم',
   },
   {
+    id: 'the-wall',
     title: 'The Wall',
     tier: 'پلن اینترپرایز',
     price: '۵,۰۰۰,۰۰۰ تومان در ماه',
     description: 'میزبانی اختصاصی، سلف‌هاستد کامل روی زیرساخت مگان بدون نیاز به سرور شخصی.',
+    infra: 'میزبانی اختصاصی مگان',
+    ctaLabel: 'درخواست مشاوره فروش',
+  },
+]
+
+const faqs = [
+  {
+    question: 'فرآیند راه‌اندازی متابیس مدیریت‌شده مگان چقدر زمان می‌برد؟',
+    answer:
+      'پس از تکمیل سفارش و اتصال دیتابیس‌ها، در کمتر از چند دقیقه دسترسی به متابیس برای تیم شما فراهم می‌شود.',
+  },
+  {
+    question: 'آیا امکان اتصال متابیس به دیتابیس‌های سازمانی ما وجود دارد؟',
+    answer:
+      'بله. تیم فنی ما اتصال امن به PostgreSQL، MySQL، SQL Server، MongoDB و سایر منابع داده شما را تضمین می‌کند.',
+  },
+  {
+    question: 'بکاپ‌گیری و امنیت داده‌ها چگونه مدیریت می‌شود؟',
+    answer:
+      'بکاپ‌گیری روزانه، رمزنگاری ارتباطات با SSL و محدودسازی دسترسی IP به صورت پیش‌فرض فعال است و سیاست‌های امنیتی قابل سفارشی‌سازی هستند.',
+  },
+  {
+    question: 'آیا می‌توان متابیس را به صورت On-Premise دریافت کرد؟',
+    answer:
+      'بله، در پلن‌های Winterfell و The Wall امکان استقرار در دیتاسنتر یا سرور اختصاصی شما با پشتیبانی کامل DevOps وجود دارد.',
   },
 ]
 
 const MetabaseServicePage = () => {
+  const [activePlan, setActivePlan] = useState(pricingPlans[0].id)
+
   return (
     <section className="metabase-service">
       <header className="metabase-hero">
@@ -82,6 +117,9 @@ const MetabaseServicePage = () => {
           <NavLink to="/dashboard" className="button button--primary">
             ورود به کنسول
           </NavLink>
+          <a href="#pricing" className="button button--ghost">
+            مشاهده پلن‌ها
+          </a>
         </div>
       </header>
 
@@ -93,6 +131,24 @@ const MetabaseServicePage = () => {
             نیاز به تخصص DevOps دارد. ما زیرساخت آماده، امن و مقیاس‌پذیر ارائه می‌دهیم تا شما فقط
             روی تحلیل داده تمرکز کنید.
           </p>
+          <div className="metabase-insight">
+            <article className="metabase-insight__card">
+              <span className="metabase-insight__label">مشکل</span>
+              <h3>راه‌اندازی پیچیده و زمان‌بر</h3>
+              <p>
+                نصب متابیس شامل پیکربندی سرور، اتصال دیتابیس، تنظیم امنیت و بکاپ است. هر خطایی می‌تواند
+                ساعت‌ها زمان تیم فنی را هدر دهد و بهره‌وری تیم تحلیل داده را پایین بیاورد.
+              </p>
+            </article>
+            <article className="metabase-insight__card">
+              <span className="metabase-insight__label metabase-insight__label--solution">راه‌حل</span>
+              <h3>زیرساخت آماده و مدیریت‌شده</h3>
+              <p>
+                با مگان، سرویس آماده، امن و مقیاس‌پذیر در اختیار دارید. تیم DevOps ما نگهداری، مانیتورینگ و
+                ارتقا را انجام می‌دهد و شما فقط داشبورد می‌سازید و تحلیل می‌کنید.
+              </p>
+            </article>
+          </div>
           <div className="metabase-benefits">
             {benefits.map((benefit) => (
               <div key={benefit} className="metabase-benefits__item">
@@ -123,18 +179,44 @@ const MetabaseServicePage = () => {
           ۲۴/۷ و مانیتورینگ سلامت سرویس هستند.
         </p>
         <div className="metabase-pricing">
-          {pricingPlans.map(({ title, tier, price, description }) => (
-            <article key={title} className="metabase-plan">
+          {pricingPlans.map(({ id, title, tier, price, description, infra, ctaLabel }) => (
+            <article
+              key={id}
+              className={`metabase-plan ${activePlan === id ? 'metabase-plan--active' : ''}`}
+              role="button"
+              tabIndex={0}
+              aria-pressed={activePlan === id}
+              onClick={() => setActivePlan(id)}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault()
+                  setActivePlan(id)
+                }
+              }}
+            >
               <div className="metabase-plan__head">
                 <span className="metabase-plan__tier">{tier}</span>
                 <h3 className="metabase-plan__title">{title}</h3>
               </div>
               <div className="metabase-plan__price">{price}</div>
               <p className="metabase-plan__description">{description}</p>
-              <button type="button" className="metabase-plan__cta">
-                سفارش دهید
-              </button>
+              <div className="metabase-plan__meta">{infra}</div>
+              <NavLink to="/login" className="metabase-plan__cta">
+                {ctaLabel}
+              </NavLink>
             </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="metabase-section metabase-section--surface">
+        <h2 className="metabase-section__title">سوالات متداول</h2>
+        <div className="metabase-faq">
+          {faqs.map(({ question, answer }) => (
+            <details key={question} className="metabase-faq__item">
+              <summary>{question}</summary>
+              <p>{answer}</p>
+            </details>
           ))}
         </div>
       </section>
