@@ -3,6 +3,9 @@ import HomePage from './pages/Home'
 import ServicesPage from './pages/Services'
 import PostgreSQLServicePage from './pages/PostgreSQLService'
 import MetabaseServicePage from './pages/MetabaseService'
+import MinioServicePage from './pages/MinioService'
+import MoodleServicePage from './pages/MoodleService'
+import NextcloudServicePage from './pages/NextcloudService'
 import LoginPage from './pages/Login'
 import DashboardPage from './pages/Dashboard'
 import './App.css'
@@ -70,6 +73,9 @@ const AppShell = () => {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/services/postgresql" element={<PostgreSQLServicePage />} />
           <Route path="/services/metabase" element={<MetabaseServicePage />} />
+          <Route path="/services/minio" element={<MinioServicePage />} />
+          <Route path="/services/moodle" element={<MoodleServicePage />} />
+          <Route path="/services/nextcloud" element={<NextcloudServicePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
         </Routes>

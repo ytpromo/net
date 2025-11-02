@@ -1,7 +1,16 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { IconType } from 'react-icons'
-import { FiActivity, FiDatabase, FiGlobe, FiPieChart, FiServer } from 'react-icons/fi'
+import {
+  FiActivity,
+  FiCloud,
+  FiDatabase,
+  FiGlobe,
+  FiPieChart,
+  FiServer,
+  FiBookOpen,
+  FiUsers,
+} from 'react-icons/fi'
 import { SiGitlab, SiJenkins } from 'react-icons/si'
 
 type Service = {
@@ -39,6 +48,42 @@ const categories: ServiceCategory[] = [
         badge: 'Analytics',
         accent: 'linear-gradient(135deg, #5f5bff 0%, #8c7dff 100%)',
         ctaLink: '/services/metabase',
+        ctaLabel: 'مشاهده جزئیات',
+      },
+      {
+        id: 'minio',
+        title: 'MinIO مدیریت‌شده',
+        description:
+          'ذخیره‌ساز آبجکت سازگار با S3 با کارایی بالا، امنیت سازمانی و استقرار چندمحیطی توسط تیم مگان.',
+        icon: FiCloud,
+        highlights: ['S3 Compatible', 'امنیت و IAM پیشرفته', 'مقیاس‌پذیری افقی'],
+        badge: 'Storage',
+        accent: 'linear-gradient(135deg, #5ee2ff 0%, #4b7bff 100%)',
+        ctaLink: '/services/minio',
+        ctaLabel: 'مشاهده جزئیات',
+      },
+      {
+        id: 'moodle',
+        title: 'Moodle مدیریت‌شده',
+        description:
+          'سامانه آموزش آنلاین متن‌باز با میزبانی ایمن، به‌روزرسانی خودکار و پشتیبانی تخصصی برای سازمان‌ها و مراکز آموزشی.',
+        icon: FiBookOpen,
+        highlights: ['نصب و راه‌اندازی سریع', 'دسترسی امن کاربران', 'اتوماسیون پشتیبان‌گیری'],
+        badge: 'LMS',
+        accent: 'linear-gradient(135deg, #ffb347 0%, #ff7b54 100%)',
+        ctaLink: '/services/moodle',
+        ctaLabel: 'مشاهده جزئیات',
+      },
+      {
+        id: 'nextcloud',
+        title: 'Nextcloud مدیریت‌شده',
+        description:
+          'فضای همکاری امن برای اشتراک فایل، تقویم و اسناد با استقرار خودکار روی زیرساخت مگان یا سرور سازمان شما.',
+        icon: FiUsers,
+        highlights: ['همگام‌سازی چندسکویی', 'امنیت و کنترل دسترسی', 'پشتیبانی ۲۴/۷'],
+        badge: 'Collaboration',
+        accent: 'linear-gradient(135deg, #6ac8ff 0%, #2e8bff 100%)',
+        ctaLink: '/services/nextcloud',
         ctaLabel: 'مشاهده جزئیات',
       },
       {
