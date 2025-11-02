@@ -2089,17 +2089,18 @@
   gap: 0.85rem;
   padding: 1.8rem;
   border-radius: 24px;
-  text-align: left;
+  text-align: right;
   background: linear-gradient(140deg, rgba(13, 15, 35, 0.92), rgba(48, 33, 82, 0.68));
   box-shadow: inset 0 0 0 1px rgba(148, 156, 255, 0.18), 0 16px 32px rgba(10, 12, 30, 0.4);
   color: var(--text-primary);
+  direction: rtl;
 }
 
 .metabase-insight__label {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  align-self: flex-start;
+  align-self: flex-end;
   padding: 0.35rem 0.9rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.12);
@@ -2136,6 +2137,19 @@
   margin: 0 auto;
 }
 
+.metabase-section__note {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 .metabase-benefits {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -2146,12 +2160,14 @@
 .metabase-benefits__item {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 0.65rem;
   padding: 0.9rem 1.25rem;
   border-radius: 16px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(18, 20, 48, 0.6));
   box-shadow: inset 0 0 0 1px rgba(148, 156, 255, 0.18);
+  text-align: right;
+  direction: rtl;
 }
 
 .metabase-benefits__icon {
@@ -2430,6 +2446,76 @@
   line-height: 1.85;
 }
 
+.landing-footer {
+  margin-top: 4rem;
+  padding: 3rem;
+  border-radius: 32px;
+  background: linear-gradient(135deg, rgba(19, 22, 48, 0.9), rgba(45, 30, 72, 0.75));
+  box-shadow: 0 28px 52px rgba(9, 12, 28, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.landing-footer__cta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  direction: rtl;
+  text-align: right;
+}
+
+.landing-footer__cta h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.landing-footer__cta p {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.8;
+  max-width: 420px;
+}
+
+.landing-footer__emoji {
+  font-size: 2rem;
+}
+
+.landing-footer__links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.landing-footer__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 600;
+}
+
+.landing-footer__link:hover,
+.landing-footer__link:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(14, 20, 50, 0.35);
+}
+
+.landing-footer__link--highlight {
+  background: linear-gradient(135deg, rgba(118, 238, 255, 0.85), rgba(160, 125, 255, 0.85));
+  color: #0f142d;
+}
+
 @media (max-width: 720px) {
   .metabase-service {
     padding: 3rem 1rem 5rem;
@@ -2459,19 +2545,21 @@
 
   .metabase-section__content {
     align-items: stretch;
-    text-align: left;
+    text-align: right;
   }
 
   .metabase-section__description {
-    text-align: left;
+    text-align: right;
   }
 
   .metabase-benefits__item {
-    justify-content: flex-start;
+    justify-content: flex-end;
+    text-align: right;
   }
 
   .metabase-insight__card {
-    text-align: center;
+    text-align: right;
+    direction: rtl;
   }
 
   .metabase-insight {
@@ -2484,6 +2572,28 @@
 
   .metabase-section--surface {
     padding: 2.5rem;
+  }
+
+  .landing-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2.5rem 1.75rem;
+    gap: 2rem;
+  }
+
+  .landing-footer__cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .landing-footer__links {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .landing-footer__link {
+    width: 100%;
+    justify-content: space-between;
   }
 }
 

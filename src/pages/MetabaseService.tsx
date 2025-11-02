@@ -1,12 +1,17 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
+import LandingFooter from '../components/LandingFooter'
+
 const benefits = [
   'بدون نیاز به دانش فنی برای نصب و نگهداری',
   'راه‌اندازی بسیار سریع (کمتر از چند دقیقه)',
   'امنیت و بکاپ‌گیری خودکار',
   'اتصال آسان به دیتابیس‌های مختلف (PostgreSQL, MySQL, MongoDB, …)',
   'پشتیبانی ۲۴/۷ توسط تیم مگان',
+  'مانیتورینگ سلامت سرویس و هشداردهی هوشمند',
+  'دسترسی مبتنی بر نقش و لاگ کامل فعالیت‌ها',
+  'امکان شخصی‌سازی برندینگ، دامنه و احراز هویت',
 ]
 
 const features = [
@@ -380,6 +385,10 @@ const MetabaseServicePage = () => {
           بسته مناسب خود را بر اساس زیرساختی که در اختیار دارید انتخاب کنید. همه پلن‌ها شامل پشتیبانی
           ۲۴/۷ و مانیتورینگ سلامت سرویس هستند.
         </p>
+        <p className="metabase-section__note">
+          می‌توانید پلن‌ها را بر اساس علاقه‌مندی خود و با نام‌گذاری سرگرم‌کننده مشاهده کنید؛ تم‌های قیمتی
+          تنها جنبه فان دارند و امکانات هر سناریو یکسان است.
+        </p>
         <div className="metabase-pricing__themes" role="tablist" aria-label="انتخاب تم قیمت‌گذاری">
           {pricingThemes.map(({ id, label, icon }) => (
             <button
@@ -441,6 +450,7 @@ const MetabaseServicePage = () => {
           ))}
         </div>
       </section>
+      <LandingFooter />
     </section>
   )
 }

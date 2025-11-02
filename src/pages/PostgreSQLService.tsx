@@ -1,5 +1,7 @@
 import { NavLink } from 'react-router-dom'
 
+import LandingFooter from '../components/LandingFooter'
+
 const featureHighlights = [
   {
     title: 'استقرار روی هر زیرساختی',
@@ -100,6 +102,7 @@ const PostgreSQLServicePage = () => {
           ))}
         </div>
       </section>
+      <LandingFooter />
     </section>
   )
 }
