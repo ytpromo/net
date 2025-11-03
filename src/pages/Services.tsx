@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom'
 import type { IconType } from 'react-icons'
 import {
   FiActivity,
+  FiArrowLeft,
+  FiBookOpen,
   FiCloud,
   FiDatabase,
   FiGlobe,
   FiPieChart,
   FiServer,
-  FiBookOpen,
   FiUsers,
 } from 'react-icons/fi'
 import { SiGitlab, SiJenkins } from 'react-icons/si'
@@ -22,7 +23,6 @@ type Service = {
   badge?: string
   accent: string
   ctaLink?: string
-  ctaLabel?: string
 }
 
 type CategoryKey = 'enterprise' | 'free'
@@ -39,28 +39,15 @@ const categories: ServiceCategory[] = [
     title: 'سرویس‌های اینترپرایز',
     services: [
       {
-        id: 'metabase',
-        title: 'Metabase مدیریت‌شده',
+        id: 'nextcloud',
+        title: 'Nextcloud مدیریت‌شده',
         description:
-          'داشبوردهای تحلیلی آماده روی زیرساخت مگان با پشتیبانی ۲۴/۷ و اتصال به هر دیتابیس سازمانی.',
-        icon: FiPieChart,
-        highlights: ['تحلیل سریع داده', 'امنیت و بکاپ خودکار', 'راه‌اندازی کمتر از ۵ دقیقه'],
-        badge: 'Analytics',
-        accent: 'linear-gradient(135deg, #5f5bff 0%, #8c7dff 100%)',
-        ctaLink: '/services/metabase',
-        ctaLabel: 'مشاهده جزئیات',
-      },
-      {
-        id: 'minio',
-        title: 'MinIO مدیریت‌شده',
-        description:
-          'ذخیره‌ساز آبجکت سازگار با S3 با کارایی بالا، امنیت سازمانی و استقرار چندمحیطی توسط تیم مگان.',
-        icon: FiCloud,
-        highlights: ['S3 Compatible', 'امنیت و IAM پیشرفته', 'مقیاس‌پذیری افقی'],
-        badge: 'Storage',
-        accent: 'linear-gradient(135deg, #5ee2ff 0%, #4b7bff 100%)',
-        ctaLink: '/services/minio',
-        ctaLabel: 'مشاهده جزئیات',
+          'فضای همکاری امن برای اشتراک فایل، تقویم و اسناد با استقرار خودکار روی زیرساخت مگان یا سرور سازمان شما.',
+        icon: FiUsers,
+        highlights: ['همگام‌سازی چندسکویی', 'امنیت و کنترل دسترسی', 'پشتیبانی ۲۴/۷'],
+        badge: 'Collaboration',
+        accent: 'linear-gradient(135deg, #6ac8ff 0%, #2e8bff 100%)',
+        ctaLink: '/services/nextcloud',
       },
       {
         id: 'moodle',
@@ -72,19 +59,28 @@ const categories: ServiceCategory[] = [
         badge: 'LMS',
         accent: 'linear-gradient(135deg, #ffb347 0%, #ff7b54 100%)',
         ctaLink: '/services/moodle',
-        ctaLabel: 'مشاهده جزئیات',
       },
       {
-        id: 'nextcloud',
-        title: 'Nextcloud مدیریت‌شده',
+        id: 'minio',
+        title: 'MinIO مدیریت‌شده',
         description:
-          'فضای همکاری امن برای اشتراک فایل، تقویم و اسناد با استقرار خودکار روی زیرساخت مگان یا سرور سازمان شما.',
-        icon: FiUsers,
-        highlights: ['همگام‌سازی چندسکویی', 'امنیت و کنترل دسترسی', 'پشتیبانی ۲۴/۷'],
-        badge: 'Collaboration',
-        accent: 'linear-gradient(135deg, #6ac8ff 0%, #2e8bff 100%)',
-        ctaLink: '/services/nextcloud',
-        ctaLabel: 'مشاهده جزئیات',
+          'ذخیره‌ساز آبجکت سازگار با S3 با کارایی بالا، امنیت سازمانی و استقرار چندمحیطی توسط تیم مگان.',
+        icon: FiCloud,
+        highlights: ['S3 Compatible', 'امنیت و IAM پیشرفته', 'مقیاس‌پذیری افقی'],
+        badge: 'Storage',
+        accent: 'linear-gradient(135deg, #5ee2ff 0%, #4b7bff 100%)',
+        ctaLink: '/services/minio',
+      },
+      {
+        id: 'metabase',
+        title: 'Metabase مدیریت‌شده',
+        description:
+          'داشبوردهای تحلیلی آماده روی زیرساخت مگان با پشتیبانی ۲۴/۷ و اتصال به هر دیتابیس سازمانی.',
+        icon: FiPieChart,
+        highlights: ['تحلیل سریع داده', 'امنیت و بکاپ خودکار', 'راه‌اندازی کمتر از ۵ دقیقه'],
+        badge: 'Analytics',
+        accent: 'linear-gradient(135deg, #5f5bff 0%, #8c7dff 100%)',
+        ctaLink: '/services/metabase',
       },
       {
         id: 'gitlab',
@@ -106,7 +102,6 @@ const categories: ServiceCategory[] = [
         badge: 'Data',
         accent: 'linear-gradient(135deg, #7d82ff 0%, #b597ff 100%)',
         ctaLink: '/services/postgresql',
-        ctaLabel: 'مشاهده جزئیات',
       },
       {
         id: 'jenkins',
@@ -171,6 +166,20 @@ const ServicesPage = () => {
           با SLA اختصاصی و پشتیبانی لحظه‌ای ارائه می‌شوند و سرویس‌های رایگان برای تیم‌های کوچک و
           استارتاپ‌ها آماده‌اند.
         </p>
+        <div className="services__insights">
+          <div className="services__insight">
+            <strong>استقرار در چند دقیقه</strong>
+            <span>زیرساخت آماده روی سرور مگان یا محیط‌های مشتری</span>
+          </div>
+          <div className="services__insight">
+            <strong>پشتیبانی ۲۴/۷</strong>
+            <span>تیم عملیات همیشه کنار شماست</span>
+          </div>
+          <div className="services__insight">
+            <strong>انعطاف در میزبانی</strong>
+            <span>از کلود مگان تا دیتاسنتر اختصاصی شما</span>
+          </div>
+        </div>
         <div className="services__tabs" role="tablist">
           {categories.map((category) => (
             <button
@@ -188,9 +197,9 @@ const ServicesPage = () => {
       </header>
 
       <div className="services__grid">
-        {activeCategory.services.map(
-          ({ id, title, description, icon: Icon, highlights, badge, accent, ctaLink, ctaLabel }) => (
-            <article key={id} className="service-card">
+        {activeCategory.services.map(({ id, title, description, icon: Icon, highlights, badge, accent, ctaLink }) => {
+          const cardContent = (
+            <>
               <div className="service-card__header">
                 <div className="service-card__icon" aria-hidden="true" style={{ background: accent }}>
                   <Icon />
@@ -205,17 +214,24 @@ const ServicesPage = () => {
                 ))}
               </ul>
               {ctaLink ? (
-                <Link to={ctaLink} className="service-card__cta">
-                  {ctaLabel ?? 'شروع کنید'}
-                </Link>
-              ) : (
-                <button type="button" className="service-card__cta">
-                  {ctaLabel ?? 'شروع کنید'}
-                </button>
-              )}
+                <div className="service-card__footer">
+                  <span>مشاهده جزئیات سرویس</span>
+                  <FiArrowLeft aria-hidden="true" />
+                </div>
+              ) : null}
+            </>
+          )
+
+          return ctaLink ? (
+            <Link key={id} to={ctaLink} className="service-card service-card--link" aria-label={`مشاهده سرویس ${title}`}>
+              {cardContent}
+            </Link>
+          ) : (
+            <article key={id} className="service-card" role="article">
+              {cardContent}
             </article>
-          ),
-        )}
+          )
+        })}
       </div>
     </section>
   )

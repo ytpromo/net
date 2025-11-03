@@ -410,6 +410,35 @@
   gap: 32px;
 }
 
+.services__insights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin: 32px 0 8px;
+}
+
+.services__insight {
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: rgba(34, 46, 88, 0.72);
+  border: 1px solid rgba(114, 136, 255, 0.22);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.services__insight strong {
+  font-size: 0.92rem;
+  color: #f4f6ff;
+}
+
+.services__insight span {
+  font-size: 0.85rem;
+  color: rgba(198, 209, 255, 0.7);
+  line-height: 1.6;
+}
+
 .service-card {
   position: relative;
   padding: 32px;
@@ -423,6 +452,11 @@
   overflow: hidden;
 }
 
+.service-card--link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .service-card::before {
   content: '';
   position: absolute;
@@ -434,8 +468,14 @@
   pointer-events: none;
 }
 
-.service-card:hover::before {
+.service-card:hover::before,
+.service-card:focus-visible::before {
   opacity: 1;
+}
+
+.service-card.service-card--link:focus-visible {
+  outline: 2px solid rgba(124, 77, 255, 0.6);
+  outline-offset: 4px;
 }
 
 .service-card__header {
@@ -493,29 +533,21 @@
   letter-spacing: -0.005em;
 }
 
-.service-card__cta {
-  align-self: flex-start;
+.service-card__footer {
   margin-top: auto;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  border: none;
-  border-radius: 14px;
-  padding: 10px 18px;
-  background: rgba(96, 118, 255, 0.18);
+  gap: 10px;
+  font-size: 0.9rem;
   color: rgba(212, 223, 255, 0.86);
-  font-size: 0.88rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
-  text-decoration: none;
+  opacity: 0.85;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.service-card__cta:hover,
-.service-card__cta:focus-visible {
-  background: linear-gradient(135deg, #7c4dff 0%, #1cd8ff 100%);
-  color: #070918;
-  transform: translateY(-1px);
+.service-card:hover .service-card__footer,
+.service-card:focus-visible .service-card__footer {
+  opacity: 1;
+  transform: translateX(-4px);
 }
 
 .integration-card {
@@ -1683,6 +1715,15 @@
   .services__grid {
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;
+  }
+
+  .services__insights {
+    margin: 24px 0 4px;
+    gap: 14px;
+  }
+
+  .services__insight {
+    padding: 16px 18px;
   }
 
   .service-card {
