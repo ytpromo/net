@@ -254,9 +254,9 @@ const PhpMyAdminServicePage = () => {
       </header>
 
       <section className="phpmyadmin-section">
-        <div className="phpmyadmin-section__content">
+        <div className="phpmyadmin-section__content phpmyadmin-section__content--center">
           <h2 className="phpmyadmin-section__title phpmyadmin-section__title--center">چرا phpMyAdmin مدیریت‌شده مگان؟</h2>
-          <p className="phpmyadmin-section__description">
+          <p className="phpmyadmin-section__description phpmyadmin-section__description--center">
             راه‌اندازی phpMyAdmin روی زیرساخت‌های مختلف نیاز به تخصص DevOps، امن‌سازی و مانیتورینگ دارد.
             تیم مگان زیرساخت آماده و مقیاس‌پذیر را فراهم می‌کند تا شما بر مدیریت دیتابیس تمرکز کنید.
           </p>

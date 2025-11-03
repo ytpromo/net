@@ -3956,6 +3956,11 @@
   text-align: right;
 }
 
+.phpmyadmin-section__content--center {
+  align-items: center;
+  text-align: center;
+}
+
 .phpmyadmin-section__title {
   font-size: clamp(1.9rem, 3.5vw, 2.4rem);
   text-align: right;
@@ -3972,6 +3977,12 @@
   line-height: 1.85;
   font-size: 1.05rem;
   text-align: right;
+}
+
+.phpmyadmin-section__description--center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .phpmyadmin-section__note {
