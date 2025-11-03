@@ -245,7 +245,9 @@ const NextcloudServicePage = () => {
 
       <section className="nextcloud-section">
         <div className="nextcloud-section__content">
-          <h2 className="nextcloud-section__title">چرا Nextcloud مدیریت‌شده مگان؟</h2>
+          <h2 className="nextcloud-section__title nextcloud-section__title--center">
+            چرا Nextcloud مدیریت‌شده مگان؟
+          </h2>
           <p className="nextcloud-section__description">
             شرکت‌ها برای ساخت فضای همکاری امن نیاز به ترکیب زیرساخت، امنیت، بکاپ و نگهداری مستمر دارند. ما با
             تجربه پیاده‌سازی سلف‌هاستد، پیچیدگی‌های عملیاتی را برطرف می‌کنیم تا دسترسی به فایل‌ها و همکاری تیمی

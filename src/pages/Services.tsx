@@ -10,6 +10,7 @@ import {
   FiGlobe,
   FiPieChart,
   FiServer,
+  FiSettings,
   FiUsers,
 } from 'react-icons/fi'
 import { SiGitlab, SiJenkins } from 'react-icons/si'
@@ -81,6 +82,17 @@ const categories: ServiceCategory[] = [
         badge: 'Analytics',
         accent: 'linear-gradient(135deg, #5f5bff 0%, #8c7dff 100%)',
         ctaLink: '/services/metabase',
+      },
+      {
+        id: 'phpmyadmin',
+        title: 'phpMyAdmin مدیریت‌شده',
+        description:
+          'مدیریت پایگاه‌داده MySQL و MariaDB با امنیت کامل، بکاپ خودکار و استقرار سریع روی هر زیرساخت.',
+        icon: FiSettings,
+        highlights: ['پیکربندی امن', 'بکاپ‌گیری هوشمند', 'اتصال چند دیتابیس'],
+        badge: 'Database Ops',
+        accent: 'linear-gradient(135deg, #ffb86c 0%, #ff6f61 100%)',
+        ctaLink: '/services/phpmyadmin',
       },
       {
         id: 'gitlab',

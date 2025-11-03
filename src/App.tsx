@@ -6,6 +6,7 @@ import MetabaseServicePage from './pages/MetabaseService'
 import MinioServicePage from './pages/MinioService'
 import MoodleServicePage from './pages/MoodleService'
 import NextcloudServicePage from './pages/NextcloudService'
+import PhpMyAdminServicePage from './pages/PhpMyAdminService'
 import LoginPage from './pages/Login'
 import DashboardPage from './pages/Dashboard'
 import './App.css'
@@ -76,6 +77,7 @@ const AppShell = () => {
           <Route path="/services/minio" element={<MinioServicePage />} />
           <Route path="/services/moodle" element={<MoodleServicePage />} />
           <Route path="/services/nextcloud" element={<NextcloudServicePage />} />
+          <Route path="/services/phpmyadmin" element={<PhpMyAdminServicePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
         </Routes>
