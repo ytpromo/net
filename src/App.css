@@ -4323,6 +4323,11 @@
   text-align: right;
 }
 
+.phpmyadmin-section__title--center {
+  text-align: center;
+  width: 100%;
+}
+
 .phpmyadmin-section__description {
   max-width: 760px;
   color: rgba(255, 235, 220, 0.8);
