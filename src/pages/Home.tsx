@@ -8,6 +8,7 @@ import {
 } from 'react-icons/fi'
 import { SiGitlab, SiJenkins, SiJirasoftware, SiTelegram } from 'react-icons/si'
 import { TbBrandVisualStudio } from 'react-icons/tb'
+import meganLogo from '../assets/megan-logo.svg'
 
 const integrations: { id: string; title: string; description: string; icon: IconType; gradient: string }[] = [
   {
@@ -88,9 +89,7 @@ const HomePage = () => {
       <header className="hero">
         <div className="hero__content">
           <div className="hero__badge">
-            <div className="hero__badge-logo" aria-hidden="true">
-              <span className="hero__badge-wave" />
-            </div>
+            <img src={meganLogo} alt="لوگوی مگان" className="hero__badge-image" />
             <div className="hero__badge-text">
               <span className="hero__badge-title">MEGAN</span>
               <span className="hero__badge-title hero__badge-title--accent">CLOUD</span>

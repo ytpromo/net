@@ -1,6 +1,8 @@
 import { NavLink } from 'react-router-dom'
 
 import LandingFooter from '../components/LandingFooter'
+import meganLogo from '../assets/megan-logo.svg'
+import postgresLogo from '../assets/postgresql.svg'
 
 const featureHighlights = [
   {
@@ -43,19 +45,13 @@ const PostgreSQLServicePage = () => {
     <section className="postgres-service">
       <header className="postgres-hero">
         <div className="postgres-hero__badge">Enterprise Database</div>
-        <div className="postgres-hero__logo">
-          <div className="postgres-hero__logo-mark" aria-hidden="true">
-            <span className="postgres-hero__stripe postgres-hero__stripe--one" />
-            <span className="postgres-hero__stripe postgres-hero__stripe--two" />
-            <span className="postgres-hero__stripe postgres-hero__stripe--three" />
+        <div className="postgres-hero__logo hero-logo-pair" aria-label="لوگوی مگان و PostgreSQL">
+          <div className="hero-logo-pair__image hero-logo-pair__image--megan">
+            <img src={meganLogo} alt="لوگوی مگان" />
           </div>
-          <div className="postgres-hero__divider" aria-hidden="true" />
-          <div className="postgres-hero__pg">
-            <span className="postgres-hero__pg-circle" aria-hidden="true">
-              <span className="postgres-hero__pg-eye postgres-hero__pg-eye--left" />
-              <span className="postgres-hero__pg-eye postgres-hero__pg-eye--right" />
-            </span>
-            <span className="postgres-hero__pg-title">PostgreSQL</span>
+          <span className="hero-logo-pair__divider" aria-hidden="true" />
+          <div className="hero-logo-pair__image">
+            <img src={postgresLogo} alt="لوگوی PostgreSQL" />
           </div>
         </div>
         <h1 className="postgres-hero__title">PostgreSQL مدیریت‌شده توسط مگان</h1>

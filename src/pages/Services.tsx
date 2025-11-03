@@ -1,25 +1,21 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { IconType } from 'react-icons'
-import {
-  FiActivity,
-  FiArrowLeft,
-  FiBookOpen,
-  FiCloud,
-  FiDatabase,
-  FiGlobe,
-  FiPieChart,
-  FiServer,
-  FiSettings,
-  FiUsers,
-} from 'react-icons/fi'
+import { FiActivity, FiArrowLeft, FiGlobe, FiServer } from 'react-icons/fi'
 import { SiGitlab, SiJenkins } from 'react-icons/si'
+import metabaseLogo from '../assets/metabase-logo.svg'
+import minioLogo from '../assets/minio-logo.svg'
+import moodleLogo from '../assets/moodle-logo.svg'
+import nextcloudLogo from '../assets/nextcloud-logo.svg'
+import phpMyAdminLogo from '../assets/phpmyadmin-logo.svg'
+import postgresLogo from '../assets/postgresql.svg'
 
 type Service = {
   id: string
   title: string
   description: string
-  icon: IconType
+  icon?: IconType
+  logo?: string
   highlights: string[]
   badge?: string
   accent: string
@@ -44,7 +40,7 @@ const categories: ServiceCategory[] = [
         title: 'Nextcloud مدیریت‌شده',
         description:
           'فضای همکاری امن برای اشتراک فایل، تقویم و اسناد با استقرار خودکار روی زیرساخت مگان یا سرور سازمان شما.',
-        icon: FiUsers,
+        logo: nextcloudLogo,
         highlights: ['همگام‌سازی چندسکویی', 'امنیت و کنترل دسترسی', 'پشتیبانی ۲۴/۷'],
         badge: 'Collaboration',
         accent: 'linear-gradient(135deg, #6ac8ff 0%, #2e8bff 100%)',
@@ -55,7 +51,7 @@ const categories: ServiceCategory[] = [
         title: 'Moodle مدیریت‌شده',
         description:
           'سامانه آموزش آنلاین متن‌باز با میزبانی ایمن، به‌روزرسانی خودکار و پشتیبانی تخصصی برای سازمان‌ها و مراکز آموزشی.',
-        icon: FiBookOpen,
+        logo: moodleLogo,
         highlights: ['نصب و راه‌اندازی سریع', 'دسترسی امن کاربران', 'اتوماسیون پشتیبان‌گیری'],
         badge: 'LMS',
         accent: 'linear-gradient(135deg, #ffb347 0%, #ff7b54 100%)',
@@ -66,7 +62,7 @@ const categories: ServiceCategory[] = [
         title: 'MinIO مدیریت‌شده',
         description:
           'ذخیره‌ساز آبجکت سازگار با S3 با کارایی بالا، امنیت سازمانی و استقرار چندمحیطی توسط تیم مگان.',
-        icon: FiCloud,
+        logo: minioLogo,
         highlights: ['S3 Compatible', 'امنیت و IAM پیشرفته', 'مقیاس‌پذیری افقی'],
         badge: 'Storage',
         accent: 'linear-gradient(135deg, #5ee2ff 0%, #4b7bff 100%)',
@@ -77,7 +73,7 @@ const categories: ServiceCategory[] = [
         title: 'Metabase مدیریت‌شده',
         description:
           'داشبوردهای تحلیلی آماده روی زیرساخت مگان با پشتیبانی ۲۴/۷ و اتصال به هر دیتابیس سازمانی.',
-        icon: FiPieChart,
+        logo: metabaseLogo,
         highlights: ['تحلیل سریع داده', 'امنیت و بکاپ خودکار', 'راه‌اندازی کمتر از ۵ دقیقه'],
         badge: 'Analytics',
         accent: 'linear-gradient(135deg, #5f5bff 0%, #8c7dff 100%)',
@@ -88,7 +84,7 @@ const categories: ServiceCategory[] = [
         title: 'phpMyAdmin مدیریت‌شده',
         description:
           'مدیریت پایگاه‌داده MySQL و MariaDB با امنیت کامل، بکاپ خودکار و استقرار سریع روی هر زیرساخت.',
-        icon: FiSettings,
+        logo: phpMyAdminLogo,
         highlights: ['پیکربندی امن', 'بکاپ‌گیری هوشمند', 'اتصال چند دیتابیس'],
         badge: 'Database Ops',
         accent: 'linear-gradient(135deg, #ffb86c 0%, #ff6f61 100%)',
@@ -109,7 +105,7 @@ const categories: ServiceCategory[] = [
         title: 'PostgreSQL مدیریت‌شده',
         description:
           'راهکار دیتابیس سازمانی با استقرار خودکار، بک‌آپ‌گیری مستمر و مانیتورینگ بلادرنگ روی زیرساخت مگان یا سرور شما.',
-        icon: FiDatabase,
+        logo: postgresLogo,
         highlights: ['استقرار چندمحیطی', 'پایش ۲۴/۷', 'رمزنگاری در حالت سکون'],
         badge: 'Data',
         accent: 'linear-gradient(135deg, #7d82ff 0%, #b597ff 100%)',
@@ -209,13 +205,19 @@ const ServicesPage = () => {
       </header>
 
       <div className="services__grid">
-        {activeCategory.services.map(({ id, title, description, icon: Icon, highlights, badge, accent, ctaLink }) => {
+        {activeCategory.services.map(({ id, title, description, icon: Icon, logo, highlights, badge, accent, ctaLink }) => {
           const cardContent = (
             <>
               <div className="service-card__header">
-                <div className="service-card__icon" aria-hidden="true" style={{ background: accent }}>
-                  <Icon />
-                </div>
+                {logo ? (
+                  <div className="service-card__logo" aria-hidden="true" style={{ background: accent }}>
+                    <img src={logo} alt="" />
+                  </div>
+                ) : (
+                  <div className="service-card__icon" aria-hidden="true" style={{ background: accent }}>
+                    {Icon ? <Icon /> : null}
+                  </div>
+                )}
                 {badge ? <span className="service-card__badge">{badge}</span> : null}
               </div>
               <h3 className="service-card__title">{title}</h3>

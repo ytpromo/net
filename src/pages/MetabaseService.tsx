@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 import LandingFooter from '../components/LandingFooter'
+import meganLogo from '../assets/megan-logo.svg'
+import metabaseLogo from '../assets/metabase-logo.svg'
 
 const benefits = [
   'بدون نیاز به دانش فنی برای نصب و نگهداری',
@@ -303,16 +305,13 @@ const MetabaseServicePage = () => {
     <section className="metabase-service">
       <header className="metabase-hero">
         <div className="metabase-hero__badge">Analytics Platform</div>
-        <div className="metabase-hero__logo" aria-hidden="true">
-          <div className="metabase-hero__megan">
-            <span className="metabase-hero__stripe metabase-hero__stripe--one" />
-            <span className="metabase-hero__stripe metabase-hero__stripe--two" />
-            <span className="metabase-hero__stripe metabase-hero__stripe--three" />
+        <div className="metabase-hero__logo hero-logo-pair" aria-label="لوگوی مگان و متابیس">
+          <div className="hero-logo-pair__image hero-logo-pair__image--megan">
+            <img src={meganLogo} alt="لوگوی مگان" />
           </div>
-          <span className="metabase-hero__divider" />
-          <div className="metabase-hero__mark">
-            <span className="metabase-hero__orb" />
-            <span className="metabase-hero__title-text">Metabase</span>
+          <span className="hero-logo-pair__divider" />
+          <div className="hero-logo-pair__image">
+            <img src={metabaseLogo} alt="لوگوی Metabase" />
           </div>
         </div>
         <h1 className="metabase-hero__title">داشبوردهای تحلیلی Metabase روی زیرساخت ابری ما</h1>

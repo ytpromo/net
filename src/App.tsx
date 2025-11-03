@@ -9,6 +9,7 @@ import NextcloudServicePage from './pages/NextcloudService'
 import PhpMyAdminServicePage from './pages/PhpMyAdminService'
 import LoginPage from './pages/Login'
 import DashboardPage from './pages/Dashboard'
+import meganLogo from './assets/megan-logo.svg'
 import './App.css'
 
 const Navigation = () => {
@@ -19,9 +20,7 @@ const Navigation = () => {
     <nav className="hero__nav">
       <NavLink to="/" className="nav__brand" aria-label="صفحه اصلی">
         <div className="nav__logo" aria-hidden="true">
-          <span className="nav__logo-stripe nav__logo-stripe--one" />
-          <span className="nav__logo-stripe nav__logo-stripe--two" />
-          <span className="nav__logo-stripe nav__logo-stripe--three" />
+          <img src={meganLogo} alt="لوگوی مگان" className="nav__logo-image" />
         </div>
         <div className="nav__brand-text">
           <span className="nav__brand-name">مگان</span>

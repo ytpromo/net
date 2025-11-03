@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 import LandingFooter from '../components/LandingFooter'
+import meganLogo from '../assets/megan-logo.svg'
+import phpMyAdminLogo from '../assets/phpmyadmin-logo.svg'
 
 const benefits = [
   'راه‌اندازی آماده برای MySQL و MariaDB تنها در چند دقیقه',
@@ -227,16 +229,13 @@ const PhpMyAdminServicePage = () => {
     <section className="phpmyadmin-service">
       <header className="phpmyadmin-hero">
         <div className="phpmyadmin-hero__badge">Database Management</div>
-        <div className="phpmyadmin-hero__logo" aria-hidden="true">
-          <div className="phpmyadmin-hero__megan">
-            <span className="phpmyadmin-hero__stripe phpmyadmin-hero__stripe--one" />
-            <span className="phpmyadmin-hero__stripe phpmyadmin-hero__stripe--two" />
-            <span className="phpmyadmin-hero__stripe phpmyadmin-hero__stripe--three" />
+        <div className="phpmyadmin-hero__logo hero-logo-pair" aria-label="لوگوی مگان و phpMyAdmin">
+          <div className="hero-logo-pair__image hero-logo-pair__image--megan">
+            <img src={meganLogo} alt="لوگوی مگان" />
           </div>
-          <span className="phpmyadmin-hero__divider" />
-          <div className="phpmyadmin-hero__mark">
-            <span className="phpmyadmin-hero__glyph" />
-            <span className="phpmyadmin-hero__title-text">phpMyAdmin</span>
+          <span className="hero-logo-pair__divider" />
+          <div className="hero-logo-pair__image">
+            <img src={phpMyAdminLogo} alt="لوگوی phpMyAdmin" />
           </div>
         </div>
         <h1 className="phpmyadmin-hero__title">phpMyAdmin مدیریت‌شده روی زیرساخت ابری مگان</h1>

@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 import LandingFooter from '../components/LandingFooter'
+import meganLogo from '../assets/megan-logo.svg'
+import minioLogo from '../assets/minio-logo.svg'
 
 const benefits = [
   'سازگاری کامل با Amazon S3 و اکوسیستم ابزارهای آن',
@@ -216,16 +218,13 @@ const MinioServicePage = () => {
     <section className="minio-service">
       <header className="minio-hero">
         <div className="minio-hero__badge">Object Storage Platform</div>
-        <div className="minio-hero__logo" aria-hidden="true">
-          <div className="minio-hero__megan">
-            <span className="minio-hero__stripe minio-hero__stripe--one" />
-            <span className="minio-hero__stripe minio-hero__stripe--two" />
-            <span className="minio-hero__stripe minio-hero__stripe--three" />
+        <div className="minio-hero__logo hero-logo-pair" aria-label="لوگوی مگان و MinIO">
+          <div className="hero-logo-pair__image hero-logo-pair__image--megan">
+            <img src={meganLogo} alt="لوگوی مگان" />
           </div>
-          <span className="minio-hero__divider" />
-          <div className="minio-hero__mark">
-            <span className="minio-hero__orbit" />
-            <span className="minio-hero__title-text">MinIO</span>
+          <span className="hero-logo-pair__divider" />
+          <div className="hero-logo-pair__image">
+            <img src={minioLogo} alt="لوگوی MinIO" />
           </div>
         </div>
         <h1 className="minio-hero__title">MinIO مدیریت‌شده روی زیرساخت ابری مگان</h1>

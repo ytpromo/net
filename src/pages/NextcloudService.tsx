@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 import LandingFooter from '../components/LandingFooter'
+import meganLogo from '../assets/megan-logo.svg'
+import nextcloudLogo from '../assets/nextcloud-logo.svg'
 
 const benefits = [
   'استقرار Nextcloud در بستر ابری مگان یا سرور اختصاصی شما تنها در چند ساعت',
@@ -216,16 +218,13 @@ const NextcloudServicePage = () => {
     <section className="nextcloud-service">
       <header className="nextcloud-hero">
         <div className="nextcloud-hero__badge">Secure Collaboration</div>
-        <div className="nextcloud-hero__logo" aria-hidden="true">
-          <div className="nextcloud-hero__megan">
-            <span className="nextcloud-hero__stripe nextcloud-hero__stripe--one" />
-            <span className="nextcloud-hero__stripe nextcloud-hero__stripe--two" />
-            <span className="nextcloud-hero__stripe nextcloud-hero__stripe--three" />
+        <div className="nextcloud-hero__logo hero-logo-pair" aria-label="لوگوی مگان و Nextcloud">
+          <div className="hero-logo-pair__image hero-logo-pair__image--megan">
+            <img src={meganLogo} alt="لوگوی مگان" />
           </div>
-          <span className="nextcloud-hero__divider" />
-          <div className="nextcloud-hero__mark">
-            <span className="nextcloud-hero__orb" />
-            <span className="nextcloud-hero__title-text">Nextcloud</span>
+          <span className="hero-logo-pair__divider" />
+          <div className="hero-logo-pair__image">
+            <img src={nextcloudLogo} alt="لوگوی Nextcloud" />
           </div>
         </div>
         <h1 className="nextcloud-hero__title">Nextcloud مدیریت‌شده روی زیرساخت ابری مگان</h1>

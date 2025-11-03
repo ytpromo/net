@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 import LandingFooter from '../components/LandingFooter'
+import meganLogo from '../assets/megan-logo.svg'
+import moodleLogo from '../assets/moodle-logo.svg'
 
 const benefits = [
   'راه‌اندازی کامل Moodle روی زیرساخت مگان یا سرور اختصاصی شما تنها در چند ساعت',
@@ -216,16 +218,13 @@ const MoodleServicePage = () => {
     <section className="moodle-service">
       <header className="moodle-hero">
         <div className="moodle-hero__badge">Managed LMS</div>
-        <div className="moodle-hero__logo" aria-hidden="true">
-          <div className="moodle-hero__megan">
-            <span className="moodle-hero__stripe moodle-hero__stripe--one" />
-            <span className="moodle-hero__stripe moodle-hero__stripe--two" />
-            <span className="moodle-hero__stripe moodle-hero__stripe--three" />
+        <div className="moodle-hero__logo hero-logo-pair" aria-label="لوگوی مگان و Moodle">
+          <div className="hero-logo-pair__image hero-logo-pair__image--megan">
+            <img src={meganLogo} alt="لوگوی مگان" />
           </div>
-          <span className="moodle-hero__divider" />
-          <div className="moodle-hero__mark">
-            <span className="moodle-hero__cap" />
-            <span className="moodle-hero__title-text">Moodle</span>
+          <span className="hero-logo-pair__divider" />
+          <div className="hero-logo-pair__image">
+            <img src={moodleLogo} alt="لوگوی Moodle" />
           </div>
         </div>
         <h1 className="moodle-hero__title">LMS مدیریت‌شده Moodle روی زیرساخت ابری مگان</h1>
