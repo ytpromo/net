@@ -8,13 +8,10 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # نصب وابستگی‌ها (فقط برای محیط production)
-RUN npm ci --omit=dev
+run npm install
 
 # کپی باقی کدها
 COPY . .
-
-# تنظیم متغیر محیطی
-ENV NODE_ENV=production
 
 # باز کردن پورت 5173
 EXPOSE 5173
