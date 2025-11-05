@@ -7,6 +7,7 @@ import metabaseLogo from '../assets/metabase-logo.svg'
 import minioLogo from '../assets/minio-logo.svg'
 import moodleLogo from '../assets/moodle-logo.svg'
 import nextcloudLogo from '../assets/nextcloud-logo.svg'
+import pocketbaseLogo from '../assets/pocketbase-logo.svg'
 import phpMyAdminLogo from '../assets/phpmyadmin-logo.svg'
 import postgresLogo from '../assets/postgresql.svg'
 
@@ -78,6 +79,17 @@ const categories: ServiceCategory[] = [
         badge: 'Analytics',
         accent: 'linear-gradient(135deg, #5f5bff 0%, #8c7dff 100%)',
         ctaLink: '/services/metabase',
+      },
+      {
+        id: 'pocketbase',
+        title: 'PocketBase مدیریت‌شده',
+        description:
+          'بک‌اند Real-time آماده با احراز هویت، ذخیره‌سازی و API گرافیکی که روی هر زیرساختی در چند دقیقه در دسترس است.',
+        logo: pocketbaseLogo,
+        highlights: ['Realtime Database', 'احراز هویت و فایل امن', 'دیپلوی سریع'],
+        badge: 'Backend',
+        accent: 'linear-gradient(135deg, #4ce0c3 0%, #1b92ff 100%)',
+        ctaLink: '/services/pocketbase',
       },
       {
         id: 'phpmyadmin',
