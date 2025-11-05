@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { IconType } from 'react-icons'
-import { FiActivity, FiArrowLeft, FiGlobe, FiServer } from 'react-icons/fi'
+import { FiActivity, FiGlobe, FiServer } from 'react-icons/fi'
 import { SiGitlab, SiJenkins } from 'react-icons/si'
 import metabaseLogo from '../assets/metabase-logo.svg'
 import minioLogo from '../assets/minio-logo.svg'
@@ -227,12 +227,6 @@ const ServicesPage = () => {
                   <li key={highlight}>{highlight}</li>
                 ))}
               </ul>
-              {ctaLink ? (
-                <div className="service-card__footer">
-                  <span>مشاهده جزئیات سرویس</span>
-                  <FiArrowLeft aria-hidden="true" />
-                </div>
-              ) : null}
             </>
           )
 
