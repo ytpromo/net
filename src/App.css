@@ -2078,7 +2078,8 @@
   gap: 0.85rem;
   padding: 1.8rem;
   border-radius: 24px;
-  text-align: right;
+  text-align: center;
+  align-items: center;
   background: linear-gradient(140deg, rgba(13, 15, 35, 0.92), rgba(48, 33, 82, 0.68));
   box-shadow: inset 0 0 0 1px rgba(148, 156, 255, 0.18), 0 16px 32px rgba(10, 12, 30, 0.4);
   color: var(--text-primary);
@@ -2089,7 +2090,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  align-self: flex-end;
+  align-self: center;
   padding: 0.35rem 0.9rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.12);
@@ -2149,13 +2150,13 @@
 .metabase-benefits__item {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 0.65rem;
   padding: 0.9rem 1.25rem;
   border-radius: 16px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(18, 20, 48, 0.6));
   box-shadow: inset 0 0 0 1px rgba(148, 156, 255, 0.18);
-  text-align: right;
+  text-align: center;
   direction: rtl;
 }
 
@@ -2178,6 +2179,8 @@
   border-radius: 24px;
   background: linear-gradient(150deg, rgba(15, 16, 34, 0.92), rgba(36, 27, 72, 0.65));
   box-shadow: inset 0 0 0 1px rgba(148, 156, 255, 0.16), 0 18px 34px rgba(10, 14, 44, 0.45);
+  align-items: center;
+  text-align: center;
 }
 
 .metabase-feature h3 {
@@ -2251,6 +2254,8 @@
   cursor: pointer;
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease;
   border: 1px solid rgba(134, 116, 255, 0.24);
+  text-align: center;
+  align-items: center;
 }
 
 .metabase-plan::after {
@@ -2330,6 +2335,7 @@
   position: relative;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0.65rem 1.2rem;
   border-radius: 999px;
@@ -2353,11 +2359,12 @@
   color: var(--text-secondary);
   line-height: 1.7;
   position: relative;
+  text-align: center;
 }
 
 .metabase-plan__cta {
   margin-top: auto;
-  align-self: flex-start;
+  align-self: center;
   padding: 0.9rem 1.9rem;
   border-radius: 999px;
   border: none;
@@ -2399,6 +2406,7 @@
   padding: 1.2rem 1.5rem;
   color: rgba(255, 255, 255, 0.88);
   transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
 .metabase-faq__item[open] {
@@ -2412,6 +2420,11 @@
   font-weight: 700;
   font-size: 1.02rem;
   list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: center;
 }
 
 .metabase-faq__item summary::-webkit-details-marker {
@@ -2420,7 +2433,6 @@
 
 .metabase-faq__item summary::after {
   content: '＋';
-  float: left;
   font-weight: 400;
   transition: transform 0.3s ease;
 }
@@ -2433,6 +2445,7 @@
   margin-top: 0.85rem;
   color: rgba(255, 255, 255, 0.68);
   line-height: 1.85;
+  text-align: center;
 }
 
 .minio-service {
@@ -2506,13 +2519,13 @@
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
-  align-items: flex-end;
-  text-align: right;
+  align-items: center;
+  text-align: center;
 }
 
 .minio-section__title {
   font-size: clamp(1.9rem, 3.5vw, 2.4rem);
-  text-align: right;
+  text-align: center;
 }
 
 .minio-section__description {
@@ -2520,7 +2533,8 @@
   color: rgba(233, 249, 255, 0.75);
   line-height: 1.85;
   font-size: 1.05rem;
-  text-align: right;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .minio-section__note {
@@ -2551,7 +2565,8 @@
   border-radius: 24px;
   background: linear-gradient(145deg, rgba(4, 30, 48, 0.95), rgba(10, 45, 72, 0.65));
   box-shadow: inset 0 0 0 1px rgba(94, 226, 255, 0.22), 0 18px 36px rgba(1, 16, 32, 0.45);
-  text-align: right;
+  text-align: center;
+  align-items: center;
   direction: rtl;
   color: #e9f9ff;
 }
@@ -2560,7 +2575,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  align-self: flex-end;
+  align-self: center;
   padding: 0.35rem 0.9rem;
   border-radius: 999px;
   background: rgba(126, 232, 255, 0.16);
@@ -2594,13 +2609,13 @@
 .minio-benefits__item {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 0.65rem;
   padding: 0.95rem 1.25rem;
   border-radius: 16px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(8, 28, 46, 0.55));
   box-shadow: inset 0 0 0 1px rgba(94, 226, 255, 0.2);
-  text-align: right;
+  text-align: center;
   direction: rtl;
 }
 
@@ -2623,7 +2638,8 @@
   border-radius: 24px;
   background: linear-gradient(150deg, rgba(3, 26, 42, 0.95), rgba(12, 58, 92, 0.6));
   box-shadow: inset 0 0 0 1px rgba(94, 226, 255, 0.2), 0 18px 34px rgba(2, 20, 40, 0.5);
-  text-align: right;
+  text-align: center;
+  align-items: center;
   direction: rtl;
 }
 
@@ -2694,9 +2710,10 @@
   background: linear-gradient(160deg, rgba(6, 30, 48, 0.95), rgba(6, 42, 68, 0.65));
   box-shadow: inset 0 0 0 1px rgba(94, 226, 255, 0.18), 0 22px 44px rgba(1, 16, 32, 0.55);
   cursor: pointer;
-  text-align: right;
+  text-align: center;
   direction: rtl;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-items: center;
 }
 
 .minio-plan::before,
@@ -2737,7 +2754,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .minio-plan__tier {
@@ -2765,15 +2782,17 @@
 .minio-plan__description {
   color: rgba(233, 249, 255, 0.75);
   line-height: 1.8;
+  text-align: center;
 }
 
 .minio-plan__meta {
   color: rgba(233, 249, 255, 0.6);
   font-size: 0.95rem;
+  text-align: center;
 }
 
 .minio-plan__cta {
-  align-self: flex-start;
+  align-self: center;
   padding: 0.75rem 1.5rem;
   border-radius: 14px;
   background: linear-gradient(135deg, #7ee6ff, #3f96ff);
@@ -2808,6 +2827,7 @@
   padding: 1.2rem 1.5rem;
   color: rgba(233, 249, 255, 0.85);
   transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
 .minio-faq__item[open] {
@@ -2821,6 +2841,11 @@
   font-weight: 700;
   font-size: 1.02rem;
   list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: center;
 }
 
 .minio-faq__item summary::-webkit-details-marker {
@@ -2829,13 +2854,19 @@
 
 .minio-faq__item summary::after {
   content: '＋';
-  float: left;
   font-weight: 400;
   transition: transform 0.3s ease;
 }
 
 .minio-faq__item[open] summary::after {
   transform: rotate(45deg);
+}
+
+.minio-faq__item p {
+  margin-top: 0.85rem;
+  color: rgba(233, 249, 255, 0.72);
+  line-height: 1.9;
+  text-align: center;
 }
 
 .moodle-service {
@@ -4674,4 +4705,123 @@
     width: 64px;
     height: 1px;
   }
+}
+
+/* Center alignment for all managed service landings */
+.metabase-insight__card,
+.minio-insight__card,
+.moodle-insight__card,
+.nextcloud-insight__card,
+.phpmyadmin-insight__card {
+  text-align: center;
+  align-items: center;
+}
+
+.metabase-insight__label,
+.minio-insight__label,
+.moodle-insight__label,
+.nextcloud-insight__label,
+.phpmyadmin-insight__label {
+  align-self: center;
+}
+
+.metabase-benefits__item,
+.minio-benefits__item,
+.moodle-benefits__item,
+.nextcloud-benefits__item,
+.phpmyadmin-benefits__item {
+  justify-content: center;
+  text-align: center;
+}
+
+.metabase-feature,
+.minio-feature,
+.moodle-feature,
+.nextcloud-feature,
+.phpmyadmin-feature,
+.postgres-feature {
+  align-items: center;
+  text-align: center;
+}
+
+.metabase-plan,
+.minio-plan,
+.moodle-plan,
+.nextcloud-plan,
+.phpmyadmin-plan,
+.postgres-plan {
+  align-items: center;
+  text-align: center;
+}
+
+.metabase-plan__head,
+.minio-plan__head,
+.moodle-plan__head,
+.nextcloud-plan__head,
+.phpmyadmin-plan__head,
+.postgres-plan__header {
+  align-items: center;
+}
+
+.metabase-plan__description,
+.minio-plan__description,
+.moodle-plan__description,
+.nextcloud-plan__description,
+.phpmyadmin-plan__description,
+.postgres-plan__subtitle {
+  text-align: center;
+}
+
+.metabase-plan__meta,
+.minio-plan__meta,
+.moodle-plan__meta,
+.nextcloud-plan__meta,
+.phpmyadmin-plan__meta {
+  text-align: center;
+  justify-content: center;
+}
+
+.metabase-plan__cta,
+.minio-plan__cta,
+.moodle-plan__cta,
+.nextcloud-plan__cta,
+.phpmyadmin-plan__cta,
+.postgres-plan__cta {
+  align-self: center;
+}
+
+.metabase-faq__item,
+.minio-faq__item,
+.moodle-faq__item,
+.nextcloud-faq__item,
+.phpmyadmin-faq__item {
+  text-align: center;
+}
+
+.metabase-faq__item summary,
+.minio-faq__item summary,
+.moodle-faq__item summary,
+.nextcloud-faq__item summary,
+.phpmyadmin-faq__item summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.metabase-faq__item summary::after,
+.minio-faq__item summary::after,
+.moodle-faq__item summary::after,
+.nextcloud-faq__item summary::after,
+.phpmyadmin-faq__item summary::after {
+  float: none;
+}
+
+.metabase-faq__item p,
+.minio-faq__item p,
+.moodle-faq__item p,
+.nextcloud-faq__item p,
+.phpmyadmin-faq__item p {
+  text-align: center;
 }
