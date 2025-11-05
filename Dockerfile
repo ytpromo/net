@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # نصب وابستگی‌ها (فقط برای محیط production)
-RUN npm instal
+RUN npm install
 # کپی باقی کدها
 COPY . .
 
