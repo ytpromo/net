@@ -20,4 +20,4 @@ ENV NODE_ENV=production
 EXPOSE 5173
 
 # اجرای برنامه
-CMD ["npm", "start"]
+CMD ["npm", "run", "dev"]
