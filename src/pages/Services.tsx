@@ -10,6 +10,7 @@ import nextcloudLogo from '../assets/nextcloud-logo.svg'
 import pocketbaseLogo from '../assets/pocketbase-logo.svg'
 import phpMyAdminLogo from '../assets/phpmyadmin-logo.svg'
 import postgresLogo from '../assets/postgresql.svg'
+import rabbitmqLogo from '../assets/rabbitmq-logo.svg'
 
 type Service = {
   id: string
@@ -90,6 +91,17 @@ const categories: ServiceCategory[] = [
         badge: 'Backend',
         accent: 'linear-gradient(135deg, #4ce0c3 0%, #1b92ff 100%)',
         ctaLink: '/services/pocketbase',
+      },
+      {
+        id: 'rabbitmq',
+        title: 'RabbitMQ مدیریت‌شده',
+        description:
+          'راهکار صف پیام قابل اعتماد با کلاستر مدیریت‌شده، امنیت چندلایه و پشتیبانی ۲۴/۷ روی هر زیرساخت دلخواه شما.',
+        logo: rabbitmqLogo,
+        highlights: ['کلاستر آماده', 'پایش و هشداردهی', 'SLA سازمانی'],
+        badge: 'Messaging',
+        accent: 'linear-gradient(135deg, #ff8a3b 0%, #ff4d0d 100%)',
+        ctaLink: '/services/rabbitmq',
       },
       {
         id: 'phpmyadmin',
