@@ -9,6 +9,7 @@ import NextcloudServicePage from './pages/NextcloudService'
 import PhpMyAdminServicePage from './pages/PhpMyAdminService'
 import PocketBaseServicePage from './pages/PocketBaseService'
 import RabbitMQServicePage from './pages/RabbitMQService'
+import RocketChatServicePage from './pages/RocketChatService'
 import LoginPage from './pages/Login'
 import DashboardPage from './pages/Dashboard'
 import meganLogo from './assets/megan-logo.svg'
@@ -81,6 +82,7 @@ const AppShell = () => {
           <Route path="/services/phpmyadmin" element={<PhpMyAdminServicePage />} />
           <Route path="/services/pocketbase" element={<PocketBaseServicePage />} />
           <Route path="/services/rabbitmq" element={<RabbitMQServicePage />} />
+          <Route path="/services/rocketchat" element={<RocketChatServicePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
         </Routes>

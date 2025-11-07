@@ -9,6 +9,7 @@ import moodleLogo from '../assets/moodle-logo.svg'
 import nextcloudLogo from '../assets/nextcloud-logo.svg'
 import pocketbaseLogo from '../assets/pocketbase-logo.svg'
 import phpMyAdminLogo from '../assets/phpmyadmin-logo.svg'
+import rocketChatLogo from '../assets/rocketchat-logo.svg'
 import postgresLogo from '../assets/postgresql.svg'
 import rabbitmqLogo from '../assets/rabbitmq-logo.svg'
 
@@ -102,6 +103,17 @@ const categories: ServiceCategory[] = [
         badge: 'Messaging',
         accent: 'linear-gradient(135deg, #ff8a3b 0%, #ff4d0d 100%)',
         ctaLink: '/services/rabbitmq',
+      },
+      {
+        id: 'rocketchat',
+        title: 'Rocket.Chat مدیریت‌شده',
+        description:
+          'پلتفرم گفت‌وگوی تیمی ایمن با استقرار سریع، یکپارچگی سازمانی و پشتیبانی ۲۴/۷ توسط تیم مگان.',
+        logo: rocketChatLogo,
+        highlights: ['چت و کالابریشن امن', 'یکپارچگی با ابزارها', 'پشتیبانی ۲۴/۷'],
+        badge: 'Collaboration',
+        accent: 'linear-gradient(135deg, #ff4f6d 0%, #c7162c 100%)',
+        ctaLink: '/services/rocketchat',
       },
       {
         id: 'phpmyadmin',
