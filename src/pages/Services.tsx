@@ -10,8 +10,11 @@ import nextcloudLogo from '../assets/nextcloud-logo.svg'
 import pocketbaseLogo from '../assets/pocketbase-logo.svg'
 import phpMyAdminLogo from '../assets/phpmyadmin-logo.svg'
 import rocketChatLogo from '../assets/rocketchat-logo.svg'
+import mattermostLogo from '../assets/mattermost-logo.svg'
 import postgresLogo from '../assets/postgresql.svg'
 import rabbitmqLogo from '../assets/rabbitmq-logo.svg'
+import joomlaLogo from '../assets/joomla-logo.svg'
+import jellyfinLogo from '../assets/jellyfin-logo.svg'
 
 type Service = {
   id: string
@@ -94,6 +97,17 @@ const categories: ServiceCategory[] = [
         ctaLink: '/services/pocketbase',
       },
       {
+        id: 'mattermost',
+        title: 'Mattermost مدیریت‌شده',
+        description:
+          'پیام‌رسان تیمی امن با استقرار سریع، احراز هویت سازمانی و سفارشی‌سازی کامل روی هر زیرساختی که انتخاب می‌کنید.',
+        logo: mattermostLogo,
+        highlights: ['احراز هویت سازمانی', 'بکاپ و مانیتورینگ', 'سفارشی‌سازی برندینگ'],
+        badge: 'Collaboration',
+        accent: 'linear-gradient(135deg, #0f6fff 0%, #1cb5e0 100%)',
+        ctaLink: '/services/mattermost',
+      },
+      {
         id: 'rabbitmq',
         title: 'RabbitMQ مدیریت‌شده',
         description:
@@ -103,6 +117,17 @@ const categories: ServiceCategory[] = [
         badge: 'Messaging',
         accent: 'linear-gradient(135deg, #ff8a3b 0%, #ff4d0d 100%)',
         ctaLink: '/services/rabbitmq',
+      },
+      {
+        id: 'jellyfin',
+        title: 'Jellyfin مدیریت‌شده',
+        description:
+          'سرویس استریم سازمانی با ترنسکدینگ هوشمند، بکاپ خودکار و امنیت چندلایه روی زیرساخت مگان یا سرور شما.',
+        logo: jellyfinLogo,
+        highlights: ['ترنسکدینگ بهینه', 'مدیریت کتابخانه رسانه', 'پشتیبانی ۲۴/۷'],
+        badge: 'Media',
+        accent: 'linear-gradient(135deg, #6f9bff 0%, #8f3fff 100%)',
+        ctaLink: '/services/jellyfin',
       },
       {
         id: 'rocketchat',
@@ -125,6 +150,17 @@ const categories: ServiceCategory[] = [
         badge: 'Database Ops',
         accent: 'linear-gradient(135deg, #ffb86c 0%, #ff6f61 100%)',
         ctaLink: '/services/phpmyadmin',
+      },
+      {
+        id: 'joomla',
+        title: 'Joomla + MariaDB مدیریت‌شده',
+        description:
+          'سیستم مدیریت محتوای Joomla به همراه دیتابیس MariaDB با استقرار امن، به‌روزرسانی خودکار و پشتیبانی ۲۴/۷.',
+        logo: joomlaLogo,
+        highlights: ['بهینه‌سازی MariaDB', 'SSL و امنیت کامل', 'بکاپ روزانه'],
+        badge: 'CMS',
+        accent: 'linear-gradient(135deg, #f37321 0%, #2b8c4f 100%)',
+        ctaLink: '/services/joomla',
       },
       {
         id: 'gitlab',

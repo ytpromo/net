@@ -10,6 +10,9 @@ import PhpMyAdminServicePage from './pages/PhpMyAdminService'
 import PocketBaseServicePage from './pages/PocketBaseService'
 import RabbitMQServicePage from './pages/RabbitMQService'
 import RocketChatServicePage from './pages/RocketChatService'
+import MattermostServicePage from './pages/MattermostService'
+import JoomlaServicePage from './pages/JoomlaService'
+import JellyfinServicePage from './pages/JellyfinService'
 import LoginPage from './pages/Login'
 import DashboardPage from './pages/Dashboard'
 import meganLogo from './assets/megan-logo.svg'
@@ -80,9 +83,12 @@ const AppShell = () => {
           <Route path="/services/moodle" element={<MoodleServicePage />} />
           <Route path="/services/nextcloud" element={<NextcloudServicePage />} />
           <Route path="/services/phpmyadmin" element={<PhpMyAdminServicePage />} />
+          <Route path="/services/joomla" element={<JoomlaServicePage />} />
           <Route path="/services/pocketbase" element={<PocketBaseServicePage />} />
           <Route path="/services/rabbitmq" element={<RabbitMQServicePage />} />
           <Route path="/services/rocketchat" element={<RocketChatServicePage />} />
+          <Route path="/services/mattermost" element={<MattermostServicePage />} />
+          <Route path="/services/jellyfin" element={<JellyfinServicePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
         </Routes>
