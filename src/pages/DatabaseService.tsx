@@ -981,6 +981,29 @@ const DatabaseServicePage = () => {
 
   return (
     <div className="database-service">
+      <section className="database-switcher" aria-label="انتخاب دیتابیس">
+        <h2 className="database-switcher__title">کدام دیتابیس را نیاز دارید؟</h2>
+        <p className="database-switcher__subtitle">
+          با یک کلیک بین دیتابیس‌های محبوب جابه‌جا شوید و جزئیات تخصصی هر کدام را ببینید. به صورت پیش‌فرض
+          MySQL نمایش داده شده است.
+        </p>
+        <div className="database-switcher__grid">
+          {databases.map((db) => (
+            <button
+              key={db.key}
+              type="button"
+              className={`database-switcher__item${db.key === activeDatabase.key ? ' database-switcher__item--active' : ''}`}
+              onClick={() => setActiveKey(db.key)}
+            >
+              <span className="database-switcher__logo">
+                <img src={db.logo} alt="" aria-hidden="true" />
+              </span>
+              <span className="database-switcher__name">{db.shortName}</span>
+            </button>
+          ))}
+        </div>
+      </section>
+
       <header className="database-hero" style={{ background: activeDatabase.heroSurface }}>
         <div className="database-hero__inner" style={{ background: activeDatabase.heroAccent }}>
           <div className="database-hero__badge">Managed Database as a Service</div>
@@ -1006,29 +1029,6 @@ const DatabaseServicePage = () => {
           </div>
         </div>
       </header>
-
-      <section className="database-switcher" aria-label="انتخاب دیتابیس">
-        <h2 className="database-switcher__title">کدام دیتابیس را نیاز دارید؟</h2>
-        <p className="database-switcher__subtitle">
-          با یک کلیک بین دیتابیس‌های محبوب جابه‌جا شوید و جزئیات تخصصی هر کدام را ببینید. به صورت پیش‌فرض
-          MySQL نمایش داده شده است.
-        </p>
-        <div className="database-switcher__grid">
-          {databases.map((db) => (
-            <button
-              key={db.key}
-              type="button"
-              className={`database-switcher__item${db.key === activeDatabase.key ? ' database-switcher__item--active' : ''}`}
-              onClick={() => setActiveKey(db.key)}
-            >
-              <span className="database-switcher__logo">
-                <img src={db.logo} alt="" aria-hidden="true" />
-              </span>
-              <span className="database-switcher__name">{db.shortName}</span>
-            </button>
-          ))}
-        </div>
-      </section>
 
       <section className="database-insight">
         <div className="database-insight__card database-insight__card--problem">
