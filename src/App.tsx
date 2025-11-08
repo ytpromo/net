@@ -18,6 +18,8 @@ import GrafanaServicePage from './pages/GrafanaService'
 import GitHubRunnerServicePage from './pages/GitHubRunnerService'
 import ElasticsearchServicePage from './pages/ElasticsearchService'
 import DrupalServicePage from './pages/DrupalService'
+import PostizServicePage from './pages/PostizService'
+import WordpressServicePage from './pages/WordpressService'
 import LoginPage from './pages/Login'
 import DashboardPage from './pages/Dashboard'
 import meganLogo from './assets/megan-logo.svg'
@@ -99,6 +101,8 @@ const AppShell = () => {
           <Route path="/services/grafana" element={<GrafanaServicePage />} />
           <Route path="/services/elasticsearch" element={<ElasticsearchServicePage />} />
           <Route path="/services/github-runner" element={<GitHubRunnerServicePage />} />
+          <Route path="/services/postiz" element={<PostizServicePage />} />
+          <Route path="/services/wordpress" element={<WordpressServicePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
         </Routes>

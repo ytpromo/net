@@ -20,6 +20,8 @@ import jellyfinLogo from '../assets/jellyfin-logo.svg'
 import githubRunnerLogo from '../assets/github-runner-logo.svg'
 import elasticsearchLogo from '../assets/elasticsearch-logo.svg'
 import drupalLogo from '../assets/drupal-logo.svg'
+import postizLogo from '../assets/postiz-logo.svg'
+import wordpressLogo from '../assets/wordpress-logo.svg'
 
 type Service = {
   id: string
@@ -168,6 +170,17 @@ const categories: ServiceCategory[] = [
         ctaLink: '/services/rocketchat',
       },
       {
+        id: 'postiz',
+        title: 'Postiz مدیریت‌شده',
+        description:
+          'اتوماسیون مدیریت شبکه‌های اجتماعی با انتشار زمان‌بندی‌شده، همکاری تیمی و گزارش‌گیری عمیق روی هر زیرساخت.',
+        logo: postizLogo,
+        highlights: ['انتشار چندپلتفرمی', 'گزارش‌های Real-time', 'امنیت و کنترل دسترسی'],
+        badge: 'Marketing',
+        accent: 'linear-gradient(135deg, #7b4dff 0%, #ff4db8 100%)',
+        ctaLink: '/services/postiz',
+      },
+      {
         id: 'phpmyadmin',
         title: 'phpMyAdmin مدیریت‌شده',
         description:
@@ -199,6 +212,17 @@ const categories: ServiceCategory[] = [
         badge: 'CMS',
         accent: 'linear-gradient(135deg, #2dafea 0%, #0c6ab7 100%)',
         ctaLink: '/services/drupal',
+      },
+      {
+        id: 'wordpress',
+        title: 'WordPress + MariaDB مدیریت‌شده',
+        description:
+          'سیستم مدیریت محتوای WordPress همراه با دیتابیس MariaDB و عملیات کاملاً مدیریت‌شده برای سایت‌های محتوایی و فروشگاه‌ها.',
+        logo: wordpressLogo,
+        highlights: ['امنیت چندلایه', 'به‌روزرسانی خودکار', 'بکاپ ساعتی'],
+        badge: 'CMS',
+        accent: 'linear-gradient(135deg, #21759b 0%, #0b4a6f 100%)',
+        ctaLink: '/services/wordpress',
       },
       {
         id: 'gitlab',
