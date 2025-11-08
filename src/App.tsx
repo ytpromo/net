@@ -17,6 +17,7 @@ import HoppscotchServicePage from './pages/HoppscotchService'
 import GrafanaServicePage from './pages/GrafanaService'
 import GitHubRunnerServicePage from './pages/GitHubRunnerService'
 import ElasticsearchServicePage from './pages/ElasticsearchService'
+import DrupalServicePage from './pages/DrupalService'
 import LoginPage from './pages/Login'
 import DashboardPage from './pages/Dashboard'
 import meganLogo from './assets/megan-logo.svg'
@@ -88,6 +89,7 @@ const AppShell = () => {
           <Route path="/services/nextcloud" element={<NextcloudServicePage />} />
           <Route path="/services/phpmyadmin" element={<PhpMyAdminServicePage />} />
           <Route path="/services/joomla" element={<JoomlaServicePage />} />
+          <Route path="/services/drupal" element={<DrupalServicePage />} />
           <Route path="/services/pocketbase" element={<PocketBaseServicePage />} />
           <Route path="/services/rabbitmq" element={<RabbitMQServicePage />} />
           <Route path="/services/rocketchat" element={<RocketChatServicePage />} />

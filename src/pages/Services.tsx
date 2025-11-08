@@ -19,6 +19,7 @@ import joomlaLogo from '../assets/joomla-logo.svg'
 import jellyfinLogo from '../assets/jellyfin-logo.svg'
 import githubRunnerLogo from '../assets/github-runner-logo.svg'
 import elasticsearchLogo from '../assets/elasticsearch-logo.svg'
+import drupalLogo from '../assets/drupal-logo.svg'
 
 type Service = {
   id: string
@@ -187,6 +188,17 @@ const categories: ServiceCategory[] = [
         badge: 'CMS',
         accent: 'linear-gradient(135deg, #f37321 0%, #2b8c4f 100%)',
         ctaLink: '/services/joomla',
+      },
+      {
+        id: 'drupal',
+        title: 'Drupal + PostgreSQL مدیریت‌شده',
+        description:
+          'پلتفرم Drupal با دیتابیس PostgreSQL و عملیات DevOps کامل برای سازمان‌هایی که به انعطاف، امنیت و مقیاس بالا نیاز دارند.',
+        logo: drupalLogo,
+        highlights: ['پشتیبانی ۲۴/۷', 'بکاپ و مانیتورینگ', 'استقرار چندمحیطی'],
+        badge: 'CMS',
+        accent: 'linear-gradient(135deg, #2dafea 0%, #0c6ab7 100%)',
+        ctaLink: '/services/drupal',
       },
       {
         id: 'gitlab',
