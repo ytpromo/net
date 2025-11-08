@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import type { IconType } from 'react-icons'
 import { FiActivity, FiGlobe, FiServer } from 'react-icons/fi'
 import { SiGitlab, SiJenkins } from 'react-icons/si'
+import databaseLogo from '../assets/database-service-logo.svg'
 import metabaseLogo from '../assets/metabase-logo.svg'
 import minioLogo from '../assets/minio-logo.svg'
 import moodleLogo from '../assets/moodle-logo.svg'
@@ -48,6 +49,17 @@ const categories: ServiceCategory[] = [
     key: 'enterprise',
     title: 'سرویس‌های اینترپرایز',
     services: [
+      {
+        id: 'database',
+        title: 'Database as a Service',
+        description:
+          'هشت دیتابیس محبوب (MySQL، PostgreSQL، MariaDB، Redis، KeyDB، Dragonfly، MongoDB و ClickHouse) را انتخاب کنید و جزئیات هر کدام را به صورت زنده ببینید.',
+        logo: databaseLogo,
+        highlights: ['۸ دیتابیس محبوب', 'تعویض آنی جزئیات', 'پشتیبانی DevOps اختصاصی'],
+        badge: 'Data Platform',
+        accent: 'linear-gradient(135deg, #4f46e5 0%, #22d3ee 100%)',
+        ctaLink: '/services/database',
+      },
       {
         id: 'nextcloud',
         title: 'Nextcloud مدیریت‌شده',

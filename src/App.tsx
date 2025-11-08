@@ -20,6 +20,7 @@ import ElasticsearchServicePage from './pages/ElasticsearchService'
 import DrupalServicePage from './pages/DrupalService'
 import PostizServicePage from './pages/PostizService'
 import WordpressServicePage from './pages/WordpressService'
+import DatabaseServicePage from './pages/DatabaseService'
 import LoginPage from './pages/Login'
 import DashboardPage from './pages/Dashboard'
 import meganLogo from './assets/megan-logo.svg'
@@ -84,6 +85,7 @@ const AppShell = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/services/database" element={<DatabaseServicePage />} />
           <Route path="/services/postgresql" element={<PostgreSQLServicePage />} />
           <Route path="/services/metabase" element={<MetabaseServicePage />} />
           <Route path="/services/minio" element={<MinioServicePage />} />
