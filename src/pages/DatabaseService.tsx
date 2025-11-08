@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import type { CSSProperties } from 'react'
 import { NavLink } from 'react-router-dom'
 
 import LandingFooter from '../components/LandingFooter'
@@ -117,6 +118,20 @@ type DatabaseDefinition = {
   pricingCopy: PricingCopy
   faqs: Faq[]
   logo: string
+}
+
+const extractFirstColor = (value: string): string => {
+  const hexMatch = value.match(/#(?:[0-9a-fA-F]{3}){1,2}/)
+  if (hexMatch) {
+    return hexMatch[0]
+  }
+
+  const rgbaMatch = value.match(/rgba?\([^)]*\)/)
+  if (rgbaMatch) {
+    return rgbaMatch[0]
+  }
+
+  return value
 }
 
 const createPricingThemes = (
@@ -974,15 +989,26 @@ const DatabaseServicePage = () => {
     [activeDatabase],
   )
 
+  const themeStyles = useMemo(
+    () =>
+      ({
+        '--database-accent': activeDatabase.heroAccent,
+        '--database-accent-color': extractFirstColor(activeDatabase.heroAccent),
+        '--database-surface': activeDatabase.heroSurface,
+        '--database-surface-color': extractFirstColor(activeDatabase.heroSurface),
+      }) as CSSProperties,
+    [activeDatabase],
+  )
+
   useEffect(() => {
     setActiveTheme(pricingThemes[0].id)
     setActivePlan(pricingThemes[0].plans[0].id)
   }, [pricingThemes])
 
   return (
-    <div className="database-service">
-      <header className="database-hero" style={{ background: activeDatabase.heroSurface }}>
-        <div className="database-hero__inner" style={{ background: activeDatabase.heroAccent }}>
+    <div className="database-service" style={themeStyles}>
+      <header className="database-hero" style={{ background: 'var(--database-surface)' }}>
+        <div className="database-hero__inner" style={{ background: 'var(--database-accent)' }}>
           <div className="database-hero__badge">Managed Database as a Service</div>
           <div className="database-hero__logo hero-logo-pair" aria-label={`لوگوی مگان و ${activeDatabase.shortName}`}>
             <div className="hero-logo-pair__image hero-logo-pair__image--megan">

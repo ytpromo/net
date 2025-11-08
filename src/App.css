@@ -10218,6 +10218,10 @@
 }
 
 .database-service {
+  --database-accent: linear-gradient(135deg, #4f46e5 0%, #22d3ee 100%);
+  --database-accent-color: #4f46e5;
+  --database-surface: linear-gradient(135deg, rgba(79, 70, 229, 0.12) 0%, rgba(34, 211, 238, 0.08) 100%);
+  --database-surface-color: rgba(79, 70, 229, 0.24);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -10374,8 +10378,12 @@
 .database-insight__card {
   padding: 2.5rem 2rem;
   border-radius: 28px;
-  background: rgba(255, 255, 255, 0.88);
-  box-shadow: 0 22px 44px rgba(15, 23, 42, 0.08);
+  background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--database-surface-color) 55%, transparent) 0%,
+      color-mix(in srgb, var(--database-accent-color) 35%, transparent) 100%
+    );
+  box-shadow: 0 22px 44px color-mix(in srgb, var(--database-accent-color) 18%, rgba(15, 23, 42, 0.08));
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -10395,11 +10403,11 @@
 }
 
 .database-insight__card--problem {
-  border: 2px solid rgba(236, 72, 153, 0.4);
+  border: 1px solid color-mix(in srgb, var(--database-accent-color) 45%, transparent);
 }
 
 .database-insight__card--solution {
-  border: 2px solid rgba(34, 197, 94, 0.4);
+  border: 1px solid color-mix(in srgb, var(--database-accent-color) 60%, transparent);
 }
 
 .database-section {
@@ -10432,8 +10440,12 @@
 .database-benefits__item {
   padding: 1.75rem 1.5rem;
   border-radius: 24px;
-  background: rgba(248, 250, 255, 0.92);
-  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
+  background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--database-surface-color) 45%, transparent) 0%,
+      color-mix(in srgb, var(--database-accent-color) 25%, transparent) 100%
+    );
+  box-shadow: 0 16px 32px color-mix(in srgb, var(--database-accent-color) 15%, rgba(15, 23, 42, 0.08));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10460,8 +10472,12 @@
 .database-feature {
   padding: 2rem 1.75rem;
   border-radius: 28px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  background: linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--database-surface-color) 50%, transparent) 0%,
+      color-mix(in srgb, var(--database-accent-color) 30%, transparent) 100%
+    );
+  box-shadow: 0 20px 40px color-mix(in srgb, var(--database-accent-color) 15%, rgba(15, 23, 42, 0.08));
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
@@ -10479,10 +10495,15 @@
 }
 
 .database-section--surface {
-  background: linear-gradient(135deg, rgba(79, 70, 229, 0.08) 0%, rgba(45, 212, 191, 0.08) 100%);
+  background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--database-surface-color) 55%, transparent) 0%,
+      color-mix(in srgb, var(--database-accent-color) 35%, transparent) 100%
+    );
   padding: 4rem 3rem;
   border-radius: 36px;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 28px 64px rgba(15, 23, 42, 0.12);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--database-accent-color) 25%, transparent),
+    0 28px 64px color-mix(in srgb, var(--database-accent-color) 18%, rgba(15, 23, 42, 0.12));
   gap: 2rem;
 }
 
@@ -10497,7 +10518,11 @@
   border: none;
   border-radius: 999px;
   padding: 0.65rem 1.5rem;
-  background: rgba(255, 255, 255, 0.75);
+  background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--database-surface-color) 45%, transparent) 0%,
+      color-mix(in srgb, var(--database-accent-color) 25%, transparent) 100%
+    );
   color: #1f2937;
   font-weight: 600;
   display: flex;
@@ -10511,12 +10536,12 @@
 .database-pricing__theme:hover,
 .database-pricing__theme:focus-visible {
   transform: translateY(-2px);
-  border-color: rgba(79, 70, 229, 0.4);
+  border-color: color-mix(in srgb, var(--database-accent-color) 45%, transparent);
 }
 
 .database-pricing__theme--active {
-  border-color: rgba(79, 70, 229, 0.8);
-  box-shadow: 0 18px 36px rgba(79, 70, 229, 0.25);
+  border-color: color-mix(in srgb, var(--database-accent-color) 75%, transparent);
+  box-shadow: 0 18px 36px color-mix(in srgb, var(--database-accent-color) 28%, transparent);
 }
 
 .database-pricing__theme-icon {
@@ -10533,8 +10558,12 @@
 .database-plan {
   padding: 2.5rem 2rem;
   border-radius: 32px;
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.12);
+  background: linear-gradient(
+      150deg,
+      color-mix(in srgb, var(--database-surface-color) 50%, transparent) 0%,
+      color-mix(in srgb, var(--database-accent-color) 35%, transparent) 100%
+    );
+  box-shadow: 0 24px 48px color-mix(in srgb, var(--database-accent-color) 20%, rgba(15, 23, 42, 0.12));
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -10546,7 +10575,7 @@
 .database-plan:hover,
 .database-plan:focus-visible {
   transform: translateY(-8px);
-  box-shadow: 0 32px 64px rgba(79, 70, 229, 0.25);
+  box-shadow: 0 32px 64px color-mix(in srgb, var(--database-accent-color) 32%, transparent);
 }
 
 .database-plan__head {
@@ -10558,7 +10587,7 @@
 
 .database-plan__tier {
   font-weight: 600;
-  color: rgba(79, 70, 229, 0.9);
+  color: color-mix(in srgb, var(--database-accent-color) 75%, #ffffff 25%);
 }
 
 .database-plan__title {
@@ -10589,7 +10618,7 @@
   padding: 0.75rem 1.75rem;
   font-weight: 700;
   color: #fff;
-  background: linear-gradient(135deg, #4f46e5 0%, #22d3ee 100%);
+  background: var(--database-accent);
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -10597,7 +10626,7 @@
 .database-plan__cta:hover,
 .database-plan__cta:focus-visible {
   transform: translateY(-2px);
-  box-shadow: 0 16px 32px rgba(79, 70, 229, 0.35);
+  box-shadow: 0 16px 32px color-mix(in srgb, var(--database-accent-color) 35%, transparent);
 }
 
 .database-faq {
