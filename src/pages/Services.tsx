@@ -8,6 +8,8 @@ import minioLogo from '../assets/minio-logo.svg'
 import moodleLogo from '../assets/moodle-logo.svg'
 import nextcloudLogo from '../assets/nextcloud-logo.svg'
 import pocketbaseLogo from '../assets/pocketbase-logo.svg'
+import hoppscotchLogo from '../assets/hoppscotch-logo.svg'
+import grafanaLogo from '../assets/grafana-logo.svg'
 import phpMyAdminLogo from '../assets/phpmyadmin-logo.svg'
 import rocketChatLogo from '../assets/rocketchat-logo.svg'
 import mattermostLogo from '../assets/mattermost-logo.svg'
@@ -15,6 +17,8 @@ import postgresLogo from '../assets/postgresql.svg'
 import rabbitmqLogo from '../assets/rabbitmq-logo.svg'
 import joomlaLogo from '../assets/joomla-logo.svg'
 import jellyfinLogo from '../assets/jellyfin-logo.svg'
+import githubRunnerLogo from '../assets/github-runner-logo.svg'
+import elasticsearchLogo from '../assets/elasticsearch-logo.svg'
 
 type Service = {
   id: string
@@ -97,6 +101,28 @@ const categories: ServiceCategory[] = [
         ctaLink: '/services/pocketbase',
       },
       {
+        id: 'hoppscotch',
+        title: 'Hoppscotch مدیریت‌شده',
+        description:
+          'پلتفرم تست و دیباگ API با کالکشن‌های اشتراکی، امنیت سازمانی و اتوماسیون CI/CD روی زیرساخت ابری مگان.',
+        logo: hoppscotchLogo,
+        highlights: ['اشتراک‌گذاری تیمی', 'امنیت و رمزنگاری', 'مانیتورینگ ۲۴/۷'],
+        badge: 'API',
+        accent: 'linear-gradient(135deg, #ff8a65 0%, #ff3d94 100%)',
+        ctaLink: '/services/hoppscotch',
+      },
+      {
+        id: 'grafana',
+        title: 'Grafana مدیریت‌شده',
+        description:
+          'داشبوردهای مانیتورینگ و مشاهده‌پذیری با استقرار امن، اتصال به ده‌ها دیتا سورس و پشتیبانی ۲۴/۷ تیم مگان.',
+        logo: grafanaLogo,
+        highlights: ['Observability کامل', 'امنیت و SSO', 'هشداردهی هوشمند'],
+        badge: 'Monitoring',
+        accent: 'linear-gradient(135deg, #ffb347 0%, #ff5b2b 100%)',
+        ctaLink: '/services/grafana',
+      },
+      {
         id: 'mattermost',
         title: 'Mattermost مدیریت‌شده',
         description:
@@ -173,6 +199,17 @@ const categories: ServiceCategory[] = [
         accent: 'linear-gradient(135deg, #ff9c6b 0%, #ff4d4d 100%)',
       },
       {
+        id: 'elasticsearch',
+        title: 'Elasticsearch مدیریت‌شده',
+        description:
+          'موتور جستجو و تحلیل داده با استقرار خودکار، امنیت لایه‌ای و مانیتورینگ ۲۴/۷ توسط تیم مگان.',
+        logo: elasticsearchLogo,
+        highlights: ['شاخص‌گذاری سریع', 'امنیت و RBAC', 'مانیتورینگ مداوم'],
+        badge: 'Search',
+        accent: 'linear-gradient(135deg, #00bfb3 0%, #2ec4b6 50%, #fed766 100%)',
+        ctaLink: '/services/elasticsearch',
+      },
+      {
         id: 'postgresql',
         title: 'PostgreSQL مدیریت‌شده',
         description:
@@ -182,6 +219,17 @@ const categories: ServiceCategory[] = [
         badge: 'Data',
         accent: 'linear-gradient(135deg, #7d82ff 0%, #b597ff 100%)',
         ctaLink: '/services/postgresql',
+      },
+      {
+        id: 'github-runner',
+        title: 'GitHub Runner مدیریت‌شده',
+        description:
+          'Runnerهای اختصاصی GitHub Actions با امنیت کامل، مقیاس‌پذیری هوشمند و نگهداری ۲۴/۷ روی هر زیرساخت دلخواه شما.',
+        logo: githubRunnerLogo,
+        highlights: ['اتوماسیون CI/CD', 'امنیت و RBAC', 'مقیاس‌پذیری خودکار'],
+        badge: 'DevOps',
+        accent: 'linear-gradient(135deg, #2f81f7 0%, #54d3ff 100%)',
+        ctaLink: '/services/github-runner',
       },
       {
         id: 'jenkins',

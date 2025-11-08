@@ -13,6 +13,10 @@ import RocketChatServicePage from './pages/RocketChatService'
 import MattermostServicePage from './pages/MattermostService'
 import JoomlaServicePage from './pages/JoomlaService'
 import JellyfinServicePage from './pages/JellyfinService'
+import HoppscotchServicePage from './pages/HoppscotchService'
+import GrafanaServicePage from './pages/GrafanaService'
+import GitHubRunnerServicePage from './pages/GitHubRunnerService'
+import ElasticsearchServicePage from './pages/ElasticsearchService'
 import LoginPage from './pages/Login'
 import DashboardPage from './pages/Dashboard'
 import meganLogo from './assets/megan-logo.svg'
@@ -89,6 +93,10 @@ const AppShell = () => {
           <Route path="/services/rocketchat" element={<RocketChatServicePage />} />
           <Route path="/services/mattermost" element={<MattermostServicePage />} />
           <Route path="/services/jellyfin" element={<JellyfinServicePage />} />
+          <Route path="/services/hoppscotch" element={<HoppscotchServicePage />} />
+          <Route path="/services/grafana" element={<GrafanaServicePage />} />
+          <Route path="/services/elasticsearch" element={<ElasticsearchServicePage />} />
+          <Route path="/services/github-runner" element={<GitHubRunnerServicePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
         </Routes>
