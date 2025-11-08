@@ -1,0 +1,17 @@
+<svg width="140" height="120" viewBox="0 0 140 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pocketbaseGradient" x1="20" y1="12" x2="120" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4CE0C3" />
+      <stop offset="1" stop-color="#1B92FF" />
+    </linearGradient>
+  </defs>
+  <rect x="12" y="12" width="116" height="96" rx="28" fill="url(#pocketbaseGradient)" />
+  <path
+    d="M46 86C60.3594 86 72 74.3594 72 60C72 45.6406 60.3594 34 46 34H32V86H46ZM46 74H44V46H46C54.8366 46 62 53.1634 62 62C62 70.8366 54.8366 74 46 74Z"
+    fill="white"
+  />
+  <path
+    d="M108 60C108 74.3594 96.3594 86 82 86H68V34H82C96.3594 34 108 45.6406 108 60ZM82 74C90.8366 74 98 66.8366 98 58C98 49.1634 90.8366 44 82 44H80V74H82Z"
+    fill="white"
+  />
+</svg>

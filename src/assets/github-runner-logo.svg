@@ -1,0 +1,27 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="runnerGradient" x1="18" y1="18" x2="102" y2="102" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2b3137" />
+      <stop offset="1" stop-color="#0d1117" />
+    </linearGradient>
+    <linearGradient id="runnerAccent" x1="36" y1="36" x2="96" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2f81f7" />
+      <stop offset="1" stop-color="#54d3ff" />
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="50" fill="url(#runnerGradient)" />
+  <path
+    d="M60 30c-13.807 0-25 11.193-25 25 0 10.093 6.022 18.8 14.67 22.612l-3.67 12.388 11.026-7.356a26.567 26.567 0 0 0 2.974.168c13.807 0 25-11.193 25-25S73.807 30 60 30Zm-9.5 27.5c-1.932 0-3.5-1.792-3.5-4s1.568-4 3.5-4 3.5 1.792 3.5 4-1.568 4-3.5 4Zm19 0c-1.932 0-3.5-1.792-3.5-4s1.568-4 3.5-4 3.5 1.792 3.5 4-1.568 4-3.5 4Z"
+    fill="white"
+  />
+  <path
+    d="M77 68c-3.247 5.471-9.515 8.908-16.55 8.908-3.335 0-6.488-.74-9.215-2.099l-6.235 4.16c-.92.614-1.904-.29-1.636-1.42l2.45-10.49C42.098 63.81 39 57.352 39 50c0-12.15 9.85-22 22-22s22 9.85 22 22c0 6.139-2.656 11.664-6.996 15.502Z"
+    fill="url(#runnerAccent)"
+    opacity="0.9"
+  />
+  <circle cx="86" cy="86" r="18" fill="url(#runnerAccent)" />
+  <path
+    d="M86 76a2 2 0 0 1 2 2v5.172l3.414-3.414a2 2 0 0 1 2.828 2.828L90.828 86l3.414 3.414a2 2 0 1 1-2.828 2.828L88 88.828V94a2 2 0 0 1-4 0v-5.172l-3.414 3.414a2 2 0 1 1-2.828-2.828L82.172 86l-3.414-3.414a2 2 0 1 1 2.828-2.828L84 83.172V78a2 2 0 0 1 2-2Z"
+    fill="#0d1117"
+  />
+</svg>
