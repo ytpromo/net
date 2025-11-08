@@ -1,0 +1,12 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dbGrad" x1="16" y1="10" x2="104" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5F2EEA" />
+      <stop offset="1" stop-color="#3A8DFF" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="60" cy="24" rx="40" ry="14" fill="url(#dbGrad)" />
+  <path d="M20 24V84C20 94.4934 37.9086 102 60 102C82.0914 102 100 94.4934 100 84V24" stroke="url(#dbGrad)" stroke-width="6" stroke-linejoin="round" />
+  <path d="M100 44C100 53.9411 82.0914 62 60 62C37.9086 62 20 53.9411 20 44" stroke="url(#dbGrad)" stroke-width="6" />
+  <path d="M100 64C100 73.9411 82.0914 82 60 82C37.9086 82 20 73.9411 20 64" stroke="url(#dbGrad)" stroke-width="6" />
+</svg>
