@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { IconType } from 'react-icons'
-import { FiActivity, FiGlobe, FiServer } from 'react-icons/fi'
+import { FiActivity, FiCloud, FiCpu, FiGlobe, FiLayers, FiServer, FiZap } from 'react-icons/fi'
 import { SiGitlab, SiJenkins } from 'react-icons/si'
 import databaseLogo from '../assets/database-service-logo.svg'
 import metabaseLogo from '../assets/metabase-logo.svg'
@@ -59,6 +59,46 @@ const categories: ServiceCategory[] = [
         badge: 'Data Platform',
         accent: 'linear-gradient(135deg, #4f46e5 0%, #22d3ee 100%)',
         ctaLink: '/services/database',
+      },
+      {
+        id: 'kubernetes',
+        title: 'Kubernetes as a Service',
+        description:
+          'کلاستر Kubernetes آماده با استقرار خودکار، مانیتورینگ کامل و پشتیبانی تیم مگان برای محیط‌های تولیدی.',
+        icon: FiCloud,
+        highlights: ['استقرار خودکار', 'مانیتورینگ و هشدار', 'پشتیبانی ۲۴/۷'],
+        badge: 'Containers',
+        accent: 'linear-gradient(135deg, #3b82f6 0%, #0ea5e9 100%)',
+      },
+      {
+        id: 'iaas',
+        title: 'Infrastructure as a Service',
+        description:
+          'زیرساخت ابری اختصاصی با سرورهای قدرتمند، شبکه امن و مدیریت چرخه عمر کامل توسط تیم مگان.',
+        icon: FiLayers,
+        highlights: ['زیرساخت اختصاصی', 'شبکه امن', 'مقیاس‌پذیری آنی'],
+        badge: 'Cloud',
+        accent: 'linear-gradient(135deg, #6366f1 0%, #22d3ee 100%)',
+      },
+      {
+        id: 'saas',
+        title: 'Software as a Service',
+        description:
+          'راهکارهای نرم‌افزاری آماده برای تیم‌ها با میزبانی امن، به‌روزرسانی خودکار و سفارشی‌سازی سریع.',
+        icon: FiCpu,
+        highlights: ['راه‌اندازی سریع', 'امنیت سازمانی', 'سفارشی‌سازی آسان'],
+        badge: 'Applications',
+        accent: 'linear-gradient(135deg, #f97316 0%, #fb7185 100%)',
+      },
+      {
+        id: 'noops',
+        title: 'NoOps',
+        description:
+          'تیم مگان کل عملیات اجرایی، مانیتورینگ و نگهداری سرویس‌های شما را مدیریت می‌کند تا تیم توسعه روی محصول تمرکز کند.',
+        icon: FiZap,
+        highlights: ['عملیات تمام‌مدیریت‌شده', 'پایش پیوسته', 'SLA اختصاصی'],
+        badge: 'Ops',
+        accent: 'linear-gradient(135deg, #10b981 0%, #14b8a6 100%)',
       },
       {
         id: 'nextcloud',
