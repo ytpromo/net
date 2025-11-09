@@ -1,7 +1,16 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { IconType } from 'react-icons'
-import { FiActivity, FiCloud, FiCpu, FiGlobe, FiLayers, FiServer, FiZap } from 'react-icons/fi'
+import {
+  FiActivity,
+  FiAperture,
+  FiCloud,
+  FiCpu,
+  FiGlobe,
+  FiLayers,
+  FiServer,
+  FiZap,
+} from 'react-icons/fi'
 import databaseLogo from '../assets/database-service-logo.svg'
 
 type Service = {
@@ -39,6 +48,26 @@ const categories: ServiceCategory[] = [
         badge: 'Data Platform',
         accent: 'linear-gradient(135deg, #4f46e5 0%, #22d3ee 100%)',
         ctaLink: '/services/database',
+      },
+      {
+        id: 'ai-service',
+        title: 'AI as a Service',
+        description:
+          'دسترسی به مدل‌های هوش مصنوعی آماده برای پردازش زبان، بینایی ماشین و اتوماسیون فرایندها با استقرار امن روی زیرساخت مگان.',
+        icon: FiCpu,
+        highlights: ['مدل‌های آماده سازمانی', 'API یکپارچه', 'مقیاس‌پذیری آنی'],
+        badge: 'Intelligence',
+        accent: 'linear-gradient(135deg, #7c3aed 0%, #22d3ee 100%)',
+      },
+      {
+        id: 'apranik',
+        title: 'apranik',
+        description:
+          'آپرانیک یک موتور استقرار خودکار وب‌اپلیکیشن است که می‌تواند از هر منبعی مانند گیت‌هاب نرم‌افزار شما را با استفاده از Dockerfile و منبع کد مستقر کند.',
+        icon: FiAperture,
+        highlights: ['استقرار از هر ریپازیتوری', 'جریان CI/CD یکپارچه', 'پایش و بازبینی خودکار'],
+        badge: 'Automation',
+        accent: 'linear-gradient(135deg, #0ea5e9 0%, #22d3ee 100%)',
       },
       {
         id: 'kubernetes',
