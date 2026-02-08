@@ -21,6 +21,7 @@ import elasticsearchLogo from '../assets/elasticsearch-logo.svg'
 import drupalLogo from '../assets/drupal-logo.svg'
 import postizLogo from '../assets/postiz-logo.svg'
 import wordpressLogo from '../assets/wordpress-logo.svg'
+import strapiLogo from '../assets/strapi-logo.svg'
 
 
 type Service = {
@@ -243,6 +244,17 @@ const services: Service[] = [
     badge: 'CMS',
     accent: 'linear-gradient(135deg, #21759b 0%, #0b4a6f 100%)',
     ctaLink: '/services/wordpress',
+  },
+  {
+    id: 'strapi',
+    title: 'Strapi Headless CMS مدیریت‌شده',
+    description:
+      'پلتفرم Headless CMS با APIهای آماده، مدیریت نقش‌ها و عملیات DevOps کامل برای تیم‌های محتوا و توسعه.',
+    logo: strapiLogo,
+    highlights: ['REST & GraphQL', 'امنیت و IAM', 'انتشار چندکاناله'],
+    badge: 'CMS',
+    accent: 'linear-gradient(135deg, #7b6cff 0%, #4945ff 100%)',
+    ctaLink: '/services/strapi',
   },
   {
     id: 'github-runner',
