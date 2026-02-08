@@ -20,6 +20,7 @@ import ElasticsearchServicePage from './pages/ElasticsearchService'
 import DrupalServicePage from './pages/DrupalService'
 import PostizServicePage from './pages/PostizService'
 import WordpressServicePage from './pages/WordpressService'
+import StrapiServicePage from './pages/StrapiService'
 import SoftwareServicePage from './pages/SoftwareService'
 import DatabaseServicePage from './pages/DatabaseService'
 import LoginPage from './pages/Login'
@@ -107,6 +108,7 @@ const AppShell = () => {
           <Route path="/services/github-runner" element={<GitHubRunnerServicePage />} />
           <Route path="/services/postiz" element={<PostizServicePage />} />
           <Route path="/services/wordpress" element={<WordpressServicePage />} />
+          <Route path="/services/strapi" element={<StrapiServicePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
         </Routes>
