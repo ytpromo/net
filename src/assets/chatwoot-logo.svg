@@ -1,0 +1,22 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="chatwootGradient" x1="16" y1="16" x2="104" y2="104" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF9E4A" />
+      <stop offset="1" stop-color="#FF5C35" />
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="52" fill="url(#chatwootGradient)" opacity="0.18" />
+  <path
+    d="M36 38C36 31.3726 41.3726 26 48 26H72C78.6274 26 84 31.3726 84 38V70C84 76.6274 78.6274 82 72 82H60L47.5 93C46.3033 94.0539 44.5 93.2234 44.5 91.625V82H48C41.3726 82 36 76.6274 36 70V38Z"
+    fill="url(#chatwootGradient)"
+  />
+  <path
+    d="M50 49C50 46.7909 51.7909 45 54 45H66C68.2091 45 70 46.7909 70 49V50C70 52.2091 68.2091 54 66 54H54C51.7909 54 50 52.2091 50 50V49Z"
+    fill="#FFFFFF"
+  />
+  <path
+    d="M50 61C50 58.7909 51.7909 57 54 57H66C68.2091 57 70 58.7909 70 61V62C70 64.2091 68.2091 66 66 66H54C51.7909 66 50 64.2091 50 62V61Z"
+    fill="#FFFFFF"
+    opacity="0.9"
+  />
+</svg>

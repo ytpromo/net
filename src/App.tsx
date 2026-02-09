@@ -11,16 +11,25 @@ import PocketBaseServicePage from './pages/PocketBaseService'
 import RabbitMQServicePage from './pages/RabbitMQService'
 import RocketChatServicePage from './pages/RocketChatService'
 import MattermostServicePage from './pages/MattermostService'
+import ChatwootServicePage from './pages/ChatwootService'
 import JoomlaServicePage from './pages/JoomlaService'
 import JellyfinServicePage from './pages/JellyfinService'
 import HoppscotchServicePage from './pages/HoppscotchService'
 import GrafanaServicePage from './pages/GrafanaService'
+import KibanaServicePage from './pages/KibanaService'
 import GitHubRunnerServicePage from './pages/GitHubRunnerService'
 import ElasticsearchServicePage from './pages/ElasticsearchService'
 import DrupalServicePage from './pages/DrupalService'
 import PostizServicePage from './pages/PostizService'
 import WordpressServicePage from './pages/WordpressService'
 import StrapiServicePage from './pages/StrapiService'
+import UptimeKumaServicePage from './pages/UptimeKumaService'
+import SupabaseServicePage from './pages/SupabaseService'
+import BookStackServicePage from './pages/BookStackService'
+import ExcalidrawServicePage from './pages/ExcalidrawService'
+import MeilisearchServicePage from './pages/MeilisearchService'
+import MatrixServicePage from './pages/MatrixService'
+import PassboltServicePage from './pages/PassboltService'
 import SoftwareServicePage from './pages/SoftwareService'
 import DatabaseServicePage from './pages/DatabaseService'
 import LoginPage from './pages/Login'
@@ -101,14 +110,23 @@ const AppShell = () => {
           <Route path="/services/rabbitmq" element={<RabbitMQServicePage />} />
           <Route path="/services/rocketchat" element={<RocketChatServicePage />} />
           <Route path="/services/mattermost" element={<MattermostServicePage />} />
+          <Route path="/services/chatwoot" element={<ChatwootServicePage />} />
           <Route path="/services/jellyfin" element={<JellyfinServicePage />} />
           <Route path="/services/hoppscotch" element={<HoppscotchServicePage />} />
           <Route path="/services/grafana" element={<GrafanaServicePage />} />
+          <Route path="/services/kibana" element={<KibanaServicePage />} />
           <Route path="/services/elasticsearch" element={<ElasticsearchServicePage />} />
           <Route path="/services/github-runner" element={<GitHubRunnerServicePage />} />
           <Route path="/services/postiz" element={<PostizServicePage />} />
           <Route path="/services/wordpress" element={<WordpressServicePage />} />
           <Route path="/services/strapi" element={<StrapiServicePage />} />
+          <Route path="/services/uptime-kuma" element={<UptimeKumaServicePage />} />
+          <Route path="/services/supabase" element={<SupabaseServicePage />} />
+          <Route path="/services/bookstack" element={<BookStackServicePage />} />
+          <Route path="/services/excalidraw" element={<ExcalidrawServicePage />} />
+          <Route path="/services/meilisearch" element={<MeilisearchServicePage />} />
+          <Route path="/services/matrix" element={<MatrixServicePage />} />
+          <Route path="/services/passbolt" element={<PassboltServicePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
         </Routes>

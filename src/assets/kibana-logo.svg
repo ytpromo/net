@@ -1,0 +1,22 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="kibanaGradient" x1="18" y1="18" x2="102" y2="102" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F04E98" />
+      <stop offset="1" stop-color="#41C7D4" />
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="52" fill="url(#kibanaGradient)" opacity="0.16" />
+  <path
+    d="M60 26C42.327 26 28 40.327 28 58C28 75.673 42.327 90 60 90C77.673 90 92 75.673 92 58C92 40.327 77.673 26 60 26Z"
+    fill="url(#kibanaGradient)"
+  />
+  <path
+    d="M46 49C46 45.6863 48.6863 43 52 43H68C71.3137 43 74 45.6863 74 49V49C74 52.3137 71.3137 55 68 55H52C48.6863 55 46 52.3137 46 49V49Z"
+    fill="#FFFFFF"
+    opacity="0.9"
+  />
+  <path
+    d="M46 65C46 61.6863 48.6863 59 52 59H68C71.3137 59 74 61.6863 74 65V65C74 68.3137 71.3137 71 68 71H52C48.6863 71 46 68.3137 46 65V65Z"
+    fill="#FFFFFF"
+  />
+</svg>

@@ -9,6 +9,7 @@ import nextcloudLogo from '../assets/nextcloud-logo.svg'
 import pocketbaseLogo from '../assets/pocketbase-logo.svg'
 import hoppscotchLogo from '../assets/hoppscotch-logo.svg'
 import grafanaLogo from '../assets/grafana-logo.svg'
+import kibanaLogo from '../assets/kibana-logo.svg'
 import phpMyAdminLogo from '../assets/phpmyadmin-logo.svg'
 import rocketChatLogo from '../assets/rocketchat-logo.svg'
 import mattermostLogo from '../assets/mattermost-logo.svg'
@@ -22,6 +23,14 @@ import drupalLogo from '../assets/drupal-logo.svg'
 import postizLogo from '../assets/postiz-logo.svg'
 import wordpressLogo from '../assets/wordpress-logo.svg'
 import strapiLogo from '../assets/strapi-logo.svg'
+import uptimeKumaLogo from '../assets/uptime-kuma-logo.svg'
+import supabaseLogo from '../assets/supabase-logo.svg'
+import bookStackLogo from '../assets/bookstack-logo.svg'
+import excalidrawLogo from '../assets/excalidraw-logo.svg'
+import meilisearchLogo from '../assets/meilisearch-logo.svg'
+import matrixLogo from '../assets/matrix-logo.svg'
+import passboltLogo from '../assets/passbolt-logo.svg'
+import chatwootLogo from '../assets/chatwoot-logo.svg'
 
 
 type Service = {
@@ -80,6 +89,17 @@ const services: Service[] = [
     badge: 'Monitoring',
     accent: 'linear-gradient(135deg, #ffb347 0%, #ff5b2b 100%)',
     ctaLink: '/services/grafana',
+  },
+  {
+    id: 'kibana',
+    title: 'Kibana مدیریت‌شده',
+    description:
+      'داشبوردهای تحلیلی و مشاهده‌پذیری با استقرار امن، یکپارچگی با Elasticsearch و پشتیبانی ۲۴/۷ تیم مگان.',
+    logo: kibanaLogo,
+    highlights: ['داشبوردهای تعاملی', 'Alerting هوشمند', 'مدیریت دسترسی'],
+    badge: 'Observability',
+    accent: 'linear-gradient(135deg, #f04e98 0%, #41c7d4 100%)',
+    ctaLink: '/services/kibana',
   },
   {
     id: 'hoppscotch',
@@ -157,6 +177,17 @@ const services: Service[] = [
     badge: 'Collaboration',
     accent: 'linear-gradient(135deg, #0f6fff 0%, #1cb5e0 100%)',
     ctaLink: '/services/mattermost',
+  },
+  {
+    id: 'chatwoot',
+    title: 'Chatwoot مدیریت‌شده',
+    description:
+      'مرکز ارتباط با مشتری چندکاناله با استقرار امن، اتوماسیون پاسخ‌گویی و مانیتورینگ ۲۴/۷ توسط تیم مگان.',
+    logo: chatwootLogo,
+    highlights: ['پشتیبانی چندکاناله', 'اتوماسیون پاسخ‌گویی', 'داشبوردهای KPI'],
+    badge: 'Support',
+    accent: 'linear-gradient(135deg, #ff9e4a 0%, #ff5c35 100%)',
+    ctaLink: '/services/chatwoot',
   },
   {
     id: 'drupal',
@@ -255,6 +286,83 @@ const services: Service[] = [
     badge: 'CMS',
     accent: 'linear-gradient(135deg, #7b6cff 0%, #4945ff 100%)',
     ctaLink: '/services/strapi',
+  },
+  {
+    id: 'uptime-kuma',
+    title: 'Uptime Kuma مدیریت‌شده',
+    description:
+      'مانیتورینگ سرویس‌های حیاتی با هشداردهی لحظه‌ای، داشبورد وضعیت و گزارش‌های SLA روی زیرساخت مگان.',
+    logo: uptimeKumaLogo,
+    highlights: ['هشدارهای چندکاناله', 'Status Page سفارشی', 'گزارش SLA'],
+    badge: 'Monitoring',
+    accent: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
+    ctaLink: '/services/uptime-kuma',
+  },
+  {
+    id: 'supabase',
+    title: 'Supabase مدیریت‌شده',
+    description:
+      'پلتفرم Backend با PostgreSQL، احراز هویت و Realtime که به صورت کامل مدیریت می‌شود.',
+    logo: supabaseLogo,
+    highlights: ['PostgreSQL امن', 'Realtime API', 'Storage یکپارچه'],
+    badge: 'Backend',
+    accent: 'linear-gradient(135deg, #2ddc88 0%, #1dbf73 100%)',
+    ctaLink: '/services/supabase',
+  },
+  {
+    id: 'bookstack',
+    title: 'BookStack مدیریت‌شده',
+    description:
+      'پلتفرم مدیریت دانش سازمانی با دسترسی نقش‌محور و مستندسازی ساخت‌یافته.',
+    logo: bookStackLogo,
+    highlights: ['مدیریت دانش تیمی', 'SSO و دسترسی امن', 'جستجوی پیشرفته'],
+    badge: 'Knowledge',
+    accent: 'linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%)',
+    ctaLink: '/services/bookstack',
+  },
+  {
+    id: 'excalidraw',
+    title: 'Excalidraw مدیریت‌شده',
+    description:
+      'وایت‌بورد همکاری تیمی برای طراحی، ایده‌پردازی و مستندسازی بصری.',
+    logo: excalidrawLogo,
+    highlights: ['همکاری Real-time', 'خروجی PNG/SVG', 'اشتراک‌گذاری امن'],
+    badge: 'Collaboration',
+    accent: 'linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%)',
+    ctaLink: '/services/excalidraw',
+  },
+  {
+    id: 'meilisearch',
+    title: 'Meilisearch مدیریت‌شده',
+    description:
+      'موتور جستجوی سریع با فیلترهای پیشرفته و تجربه کاربری روان برای محصولات و محتوا.',
+    logo: meilisearchLogo,
+    highlights: ['جستجوی میلی‌ثانیه‌ای', 'فیلتر و مرتب‌سازی', 'رتبه‌بندی سفارشی'],
+    badge: 'Search',
+    accent: 'linear-gradient(135deg, #ff7cc3 0%, #ff5caa 100%)',
+    ctaLink: '/services/meilisearch',
+  },
+  {
+    id: 'matrix',
+    title: 'Matrix Server مدیریت‌شده',
+    description:
+      'سرور ارتباطی امن با رمزنگاری سرتاسری و پشتیبانی از کلاینت‌های Element.',
+    logo: matrixLogo,
+    highlights: ['رمزنگاری سرتاسری', 'پشتیبانی Element', 'مدیریت دسترسی'],
+    badge: 'Communication',
+    accent: 'linear-gradient(135deg, #34d399 0%, #0dbd8b 100%)',
+    ctaLink: '/services/matrix',
+  },
+  {
+    id: 'passbolt',
+    title: 'Passbolt مدیریت‌شده',
+    description:
+      'مدیریت امن گذرواژه‌های تیمی با کنترل دسترسی و گزارش‌های ممیزی.',
+    logo: passboltLogo,
+    highlights: ['اشتراک‌گذاری امن', 'SSO/LDAP', 'گزارش ممیزی'],
+    badge: 'Security',
+    accent: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)',
+    ctaLink: '/services/passbolt',
   },
   {
     id: 'github-runner',
